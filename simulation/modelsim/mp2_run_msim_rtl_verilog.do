@@ -6,6 +6,7 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux32.sv}
+vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/comparator.sv}
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/array.sv}
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux16.sv}
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/rv32i_types.sv}
@@ -15,7 +16,6 @@ vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/pc_re
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux2.sv}
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux4.sv}
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux8.sv}
-vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/comparator.sv}
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cache_datapath.sv}
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cache_control.sv}
 vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cpu_control.sv}

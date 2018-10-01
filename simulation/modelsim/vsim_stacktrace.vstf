@@ -160,3 +160,111 @@
 # End of Stack Trace
 
 
+# Current time Mon Oct  1 17:54:05 2018
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7fd9430: '<unknown (@0xf7fd9430)>'
+# 1    0xf6cb1d9e: '/home/cwu72/ece411/mp2/cache_datapath.sv:79'
+# 2    0x081a7535: '<unknown (@0x81a7535)>'
+# 3    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 4    0x08335145: '<unknown (@0x8335145)>'
+# 5    0x08335cf6: '<unknown (@0x8335cf6)>'
+# 6    0xf6cae8b4: '/home/cwu72/ece411/mp2/cache.sv:5'
+# 7    0x081a7535: '<unknown (@0x81a7535)>'
+# 8    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 9    0x08335145: '<unknown (@0x8335145)>'
+# 10   0x08335cf6: '<unknown (@0x8335cf6)>'
+# 11   0xf6ca0551: '/home/cwu72/ece411/mp2/mp2.sv:5'
+# 12   0x081a7535: '<unknown (@0x81a7535)>'
+# 13   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 14   0x08335145: '<unknown (@0x8335145)>'
+# 15   0x08335cf6: '<unknown (@0x8335cf6)>'
+# 16   0xf6c9d49f: '/home/cwu72/ece411/mp2/mp2_tb.sv:20'
+# 17   0x081a7535: '<unknown (@0x81a7535)>'
+# 18   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 19   0x0837d79b: '<unknown (@0x837d79b)>'
+# 20   0x0837ea45: '<unknown (@0x837ea45)>'
+# 21   0x0868fd7c: '<unknown (@0x868fd7c)>'
+# 22   0x08a49467: '<unknown (@0x8a49467)>'
+# 23   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 24   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 25   0x08a75633: '<unknown (@0x8a75633)>'
+# 26   0x08a4cbac: '<unknown (@0x8a4cbac)>'
+# 27   0x08a4fc5d: '<unknown (@0x8a4fc5d)>'
+# 28   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 29   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 30   0x08a75893: '<unknown (@0x8a75893)>'
+# 31   0x08a4b32c: '<unknown (@0x8a4b32c)>'
+# 32   0x08a52a2d: '<unknown (@0x8a52a2d)>'
+# 33   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 34   0x08a4c0ad: '<unknown (@0x8a4c0ad)>'
+# 35   0x087cfb03: '<unknown (@0x87cfb03)>'
+# 36   0x08a8324b: '<unknown (@0x8a8324b)>'
+# 37   0x08aaedc2: '<unknown (@0x8aaedc2)>'
+# 38   0x08a910d0: '<unknown (@0x8a910d0)>'
+# 39   0x08a913ce: '<unknown (@0x8a913ce)>'
+# 40   0x089b70f0: '<unknown (@0x89b70f0)>'
+# 41   0x084a0453: '<unknown (@0x84a0453)>'
+# 42   0x083c75f5: '<unknown (@0x83c75f5)>'
+# 43   0x08061dc6: '<unknown (@0x8061dc6)>'
+# End of Stack Trace
+
+
+# Current time Mon Oct  1 18:13:09 2018
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7fd9430: '<unknown (@0xf7fd9430)>'
+# 1    0xf6cb1d9e: '/home/cwu72/ece411/mp2/cache_datapath.sv:79'
+# 2    0x081a7535: '<unknown (@0x81a7535)>'
+# 3    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 4    0x08335145: '<unknown (@0x8335145)>'
+# 5    0x08335cf6: '<unknown (@0x8335cf6)>'
+# 6    0xf6cae8b4: '/home/cwu72/ece411/mp2/cache.sv:5'
+# 7    0x081a7535: '<unknown (@0x81a7535)>'
+# 8    0x081a77fe: '<unknown (@0x81a77fe)>'
+# 9    0x08335145: '<unknown (@0x8335145)>'
+# 10   0x08335cf6: '<unknown (@0x8335cf6)>'
+# 11   0xf6ca0551: '/home/cwu72/ece411/mp2/mp2.sv:5'
+# 12   0x081a7535: '<unknown (@0x81a7535)>'
+# 13   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 14   0x08335145: '<unknown (@0x8335145)>'
+# 15   0x08335cf6: '<unknown (@0x8335cf6)>'
+# 16   0xf6c9d49f: '/home/cwu72/ece411/mp2/mp2_tb.sv:20'
+# 17   0x081a7535: '<unknown (@0x81a7535)>'
+# 18   0x081a77fe: '<unknown (@0x81a77fe)>'
+# 19   0x0837d79b: '<unknown (@0x837d79b)>'
+# 20   0x0837ea45: '<unknown (@0x837ea45)>'
+# 21   0x0868fd7c: '<unknown (@0x868fd7c)>'
+# 22   0x08a49467: '<unknown (@0x8a49467)>'
+# 23   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 24   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 25   0x08a75633: '<unknown (@0x8a75633)>'
+# 26   0x08a4cbac: '<unknown (@0x8a4cbac)>'
+# 27   0x08a4fc5d: '<unknown (@0x8a4fc5d)>'
+# 28   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 29   0x08a7054b: '<unknown (@0x8a7054b)>'
+# 30   0x08a75893: '<unknown (@0x8a75893)>'
+# 31   0x08a4b32c: '<unknown (@0x8a4b32c)>'
+# 32   0x08a52a2d: '<unknown (@0x8a52a2d)>'
+# 33   0x08a4ac19: '<unknown (@0x8a4ac19)>'
+# 34   0x08a4c0ad: '<unknown (@0x8a4c0ad)>'
+# 35   0x087cfb03: '<unknown (@0x87cfb03)>'
+# 36   0x08a8324b: '<unknown (@0x8a8324b)>'
+# 37   0x08aaedc2: '<unknown (@0x8aaedc2)>'
+# 38   0x08a910d0: '<unknown (@0x8a910d0)>'
+# 39   0x08a913ce: '<unknown (@0x8a913ce)>'
+# 40   0x089b70f0: '<unknown (@0x89b70f0)>'
+# 41   0x084a0453: '<unknown (@0x84a0453)>'
+# 42   0x083c75f5: '<unknown (@0x83c75f5)>'
+# 43   0x08061dc6: '<unknown (@0x8061dc6)>'
+# End of Stack Trace
+
+

@@ -10,7 +10,7 @@ module cache_datapath
     input rv32i_word mem_wdata,
 
     /* Signals from P-memory */
-    input rv32i_cacheline pmem_rdata,
+    input [255:0] pmem_rdata,
 
     /* Signals from Cache Control */
     input logic load_data_0,
@@ -32,7 +32,7 @@ module cache_datapath
 
     /* Signals to P-memory */
     output rv32i_word pmem_address,
-    output rv32i_cacheline pmem_wdata,
+    output [255:0] pmem_wdata,
 
     /* Signals to CPU */
     output rv32i_word mem_rdata,
@@ -64,7 +64,7 @@ assign byte_offset = mem_address[4:0];
 assign one_sel = byte_offset + 1;
 assign two_sel = byte_offset + 2;
 assign three_sel = byte_offset + 3;
-assign pmem_address = {mem_address[31:5], 4'b0000};
+assign pmem_address = {mem_address[31:5], 5'b00000};
 
 /* The cache way 0 */
 array data_array0

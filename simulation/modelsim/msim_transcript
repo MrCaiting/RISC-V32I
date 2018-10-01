@@ -15,6 +15,12 @@
 # 
 # Top level modules:
 # 	mux32
+# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/comparator.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module comparator
+# 
+# Top level modules:
+# 	comparator
 # vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/array.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module array
@@ -69,14 +75,6 @@
 # 
 # Top level modules:
 # 	mux8
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/comparator.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package comparator_sv_unit
-# -- Importing package rv32i_types
-# -- Compiling module comparator
-# 
-# Top level modules:
-# 	comparator
 # vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cache_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_datapath_sv_unit
@@ -204,5 +202,4 @@
 # Loading work.cache_datapath_sv_unit
 # Loading work.cache_datapath
 # Loading work.array
-# Loading work.comparator_sv_unit
 # Loading work.comparator

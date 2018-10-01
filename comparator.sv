@@ -1,9 +1,8 @@
 // A module for the simple comparator
-import rv32i_types::*;
 
 module comparator (
-    input rv32i_cache_tag a,
-    input rv32i_cache_tag b,
+    input [23:0] a,
+    input [23:0] b,
     input valid_bit,
     output logic equal
     );
