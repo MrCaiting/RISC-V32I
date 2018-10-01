@@ -13,7 +13,7 @@ logic [width-1:0] first_mux_out;
 logic [width-1:0] second_mux_out;
 assign leading_sel = sel_in[4];
 
-mux2 outer_mux
+mux2  #(.width(8)) outer_mux
 (
     .sel(leading_sel),
     .a(first_mux_out),

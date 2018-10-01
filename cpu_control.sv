@@ -329,4 +329,4 @@ begin: next_state_assignment
 	state <= next_state;
 end
 
-endmodule : control
+endmodule : cpu_control

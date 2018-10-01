@@ -1,0 +1,1588 @@
+Analysis & Synthesis report for mp2
+Sun Sep 30 23:50:40 2018
+Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |mp2|cache:cache|cache_control:control|state
+  9. State Machine - |mp2|cpu:cpu|cpu_control:control|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:pcmux
+ 16. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:pcmux2
+ 17. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:cmpmux
+ 18. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:alumux1
+ 19. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:marmux
+ 20. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux8:alumux2
+ 21. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux16:regfilemux
+ 22. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|cmp:cmp_module|mux4:four_mux
+ 23. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|pc_register:pc
+ 24. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|register:mdrreg
+ 25. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|register:marreg
+ 26. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|register:mem_data_out
+ 27. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:data_array0
+ 28. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:tag_array0
+ 29. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:valid_array0
+ 30. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:dirty_array0
+ 31. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:data_array1
+ 32. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:tag_array1
+ 33. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:valid_array1
+ 34. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:dirty_array1
+ 35. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:lru_module
+ 36. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux2:cache_way_mux
+ 37. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux
+ 38. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux2:outer_mux
+ 39. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:frist_8mux
+ 40. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:ssecond_8mux
+ 41. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux
+ 42. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux2:outer_mux
+ 43. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:frist_8mux
+ 44. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:ssecond_8mux
+ 45. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux
+ 46. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux2:outer_mux
+ 47. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux16:frist_8mux
+ 48. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux16:ssecond_8mux
+ 49. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux
+ 50. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux2:outer_mux
+ 51. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:frist_8mux
+ 52. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:ssecond_8mux
+ 53. Port Connectivity Checks: "cache:cache|cache_datapath:datapath|mux2:cache_way_mux"
+ 54. Port Connectivity Checks: "cache:cache|cache_datapath:datapath|array:data_array1"
+ 55. Port Connectivity Checks: "cache:cache|cache_datapath:datapath|array:data_array0"
+ 56. Port Connectivity Checks: "cpu:cpu|cpu_datapath:datapath|mux16:regfilemux"
+ 57. Port Connectivity Checks: "cpu:cpu|cpu_datapath:datapath|mux2:pcmux2"
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
+ 60. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                ;
++-------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Sun Sep 30 23:50:39 2018       ;
+; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
+; Revision Name                 ; mp2                                         ;
+; Top-level Entity Name         ; mp2                                         ;
+; Family                        ; Stratix III                                 ;
+; Logic utilization             ; N/A                                         ;
+;     Combinational ALUTs       ; 195                                         ;
+;     Memory ALUTs              ; 0                                           ;
+;     Dedicated logic registers ; 472                                         ;
+; Total registers               ; 472                                         ;
+; Total pins                    ; 548                                         ;
+; Total virtual pins            ; 0                                           ;
+; Total block memory bits       ; 0                                           ;
+; DSP block 18-bit elements     ; 0                                           ;
+; Total PLLs                    ; 0                                           ;
+; Total DLLs                    ; 0                                           ;
++-------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; EP3SE80F1152C2     ;                    ;
+; Top-level entity name                                                           ; mp2                ; mp2                ;
+; Family name                                                                     ; Stratix III        ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                        ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                               ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.25        ;
+; Maximum used               ; 5           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  25.0%      ;
+;     Processors 3-5         ; < 0.1%      ;
+;     Processors 6-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
+; mux32.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux32.sv          ;         ;
+; comparator.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/comparator.sv     ;         ;
+; cache_datapath.sv                ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cache_datapath.sv ;         ;
+; cache_control.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cache_control.sv  ;         ;
+; cache.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cache.sv          ;         ;
+; cpu_datapath.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cpu_datapath.sv   ;         ;
+; cpu_control.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cpu_control.sv    ;         ;
+; array.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/array.sv          ;         ;
+; mux16.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux16.sv          ;         ;
+; mp2.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mp2.sv            ;         ;
+; rv32i_types.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/rv32i_types.sv    ;         ;
+; register.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/register.sv       ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/regfile.sv        ;         ;
+; pc_reg.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/pc_reg.sv         ;         ;
+; ir.sv                            ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/ir.sv             ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/alu.sv            ;         ;
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux2.sv           ;         ;
+; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux4.sv           ;         ;
+; cmp.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cmp.sv            ;         ;
+; mux8.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux8.sv           ;         ;
+; cpu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cpu.sv            ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++-----------------------------------------------+-----------+
+; Resource                                      ; Usage     ;
++-----------------------------------------------+-----------+
+; Estimated ALUTs Used                          ; 195       ;
+;     -- Combinational ALUTs                    ; 195       ;
+;     -- Memory ALUTs                           ; 0         ;
+;     -- LUT_REGs                               ; 0         ;
+; Dedicated logic registers                     ; 472       ;
+;                                               ;           ;
+; Estimated ALUTs Unavailable                   ; 102       ;
+;     -- Due to unpartnered combinational logic ; 102       ;
+;     -- Due to Memory ALUTs                    ; 0         ;
+;                                               ;           ;
+; Total combinational functions                 ; 195       ;
+; Combinational ALUT usage by number of inputs  ;           ;
+;     -- 7 input functions                      ; 102       ;
+;     -- 6 input functions                      ; 19        ;
+;     -- 5 input functions                      ; 11        ;
+;     -- 4 input functions                      ; 20        ;
+;     -- <=3 input functions                    ; 43        ;
+;                                               ;           ;
+; Combinational ALUTs by mode                   ;           ;
+;     -- normal mode                            ; 63        ;
+;     -- extended LUT mode                      ; 102       ;
+;     -- arithmetic mode                        ; 30        ;
+;     -- shared arithmetic mode                 ; 0         ;
+;                                               ;           ;
+; Estimated ALUT/register pairs used            ; 704       ;
+;                                               ;           ;
+; Total registers                               ; 472       ;
+;     -- Dedicated logic registers              ; 472       ;
+;     -- I/O registers                          ; 0         ;
+;     -- LUT_REGs                               ; 0         ;
+;                                               ;           ;
+;                                               ;           ;
+; I/O pins                                      ; 548       ;
+; DSP block 18-bit elements                     ; 0         ;
+; Maximum fan-out node                          ; clk~input ;
+; Maximum fan-out                               ; 472       ;
+; Total fan-out                                 ; 3022      ;
+; Average fan-out                               ; 1.71      ;
++-----------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
++---------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Library Name ;
++---------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+; |mp2                            ; 195 (0)           ; 472 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 548  ; 0            ; |mp2                                                          ; work         ;
+;    |cache:cache|                ; 158 (0)           ; 411 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache                                              ; work         ;
+;       |cache_control:control|   ; 8 (8)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_control:control                        ; work         ;
+;       |cache_datapath:datapath| ; 150 (0)           ; 408 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath                      ; work         ;
+;          |array:lru_module|     ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:lru_module     ; work         ;
+;          |array:tag_array0|     ; 48 (48)           ; 192 (192)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:tag_array0     ; work         ;
+;          |array:tag_array1|     ; 48 (48)           ; 192 (192)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:tag_array1     ; work         ;
+;          |array:valid_array0|   ; 14 (14)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:valid_array0   ; work         ;
+;          |array:valid_array1|   ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:valid_array1   ; work         ;
+;          |comparator:compare_0| ; 10 (10)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|comparator:compare_0 ; work         ;
+;          |comparator:compare_1| ; 10 (10)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|comparator:compare_1 ; work         ;
+;    |cpu:cpu|                    ; 37 (0)            ; 61 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu                                                  ; work         ;
+;       |cpu_control:control|     ; 3 (3)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_control:control                              ; work         ;
+;       |cpu_datapath:datapath|   ; 34 (30)           ; 57 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath                            ; work         ;
+;          |pc_register:pc|       ; 2 (2)             ; 30 (30)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|pc_register:pc             ; work         ;
+;          |register:marreg|      ; 2 (2)             ; 27 (27)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|register:marreg            ; work         ;
++---------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------+
+; State Machine - |mp2|cache:cache|cache_control:control|state          ;
++-------------------+------------+-------------------+------------------+
+; Name              ; state.idle ; state.access_pmem ; state.read_write ;
++-------------------+------------+-------------------+------------------+
+; state.idle        ; 0          ; 0                 ; 0                ;
+; state.read_write  ; 1          ; 0                 ; 1                ;
+; state.access_pmem ; 1          ; 1                 ; 0                ;
++-------------------+------------+-------------------+------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |mp2|cpu:cpu|cpu_control:control|state                                                                                                                                                                                            ;
++-----------------+---------------+-------------+------------+------------+------------+------------+-----------------+--------------+-----------+----------+-------------+-------------+--------------+--------------+--------------+--------------+
+; Name            ; state.s_auipc ; state.s_lui ; state.str2 ; state.str1 ; state.ldr2 ; state.ldr1 ; state.calc_addr ; state.s_jalr ; state.jal ; state.br ; state.s_reg ; state.s_imm ; state.decode ; state.fetch3 ; state.fetch2 ; state.fetch1 ;
++-----------------+---------------+-------------+------------+------------+------------+------------+-----------------+--------------+-----------+----------+-------------+-------------+--------------+--------------+--------------+--------------+
+; state.fetch1    ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ;
+; state.fetch2    ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 1            ; 1            ;
+; state.fetch3    ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 1            ; 0            ; 1            ;
+; state.decode    ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 1            ; 0            ; 0            ; 1            ;
+; state.s_imm     ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 1           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_reg     ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 1           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.br        ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 1        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.jal       ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 1         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_jalr    ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 1            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.calc_addr ; 0             ; 0           ; 0          ; 0          ; 0          ; 0          ; 1               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldr1      ; 0             ; 0           ; 0          ; 0          ; 0          ; 1          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldr2      ; 0             ; 0           ; 0          ; 0          ; 1          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.str1      ; 0             ; 0           ; 0          ; 1          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.str2      ; 0             ; 0           ; 1          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_lui     ; 0             ; 1           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_auipc   ; 1             ; 0           ; 0          ; 0          ; 0          ; 0          ; 0               ; 0            ; 0         ; 0        ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
++-----------------+---------------+-------------+------------+------------+------------+------------+-----------------+--------------+-----------+----------+-------------+-------------+--------------+--------------+--------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                  ;
++-----------------------------------------------------------+---------------------------------------------------------+
+; Register name                                             ; Reason for Removal                                      ;
++-----------------------------------------------------------+---------------------------------------------------------+
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[0..31] ; Stuck at GND due to stuck port data_in                  ;
+; cpu:cpu|cpu_datapath:datapath|ir:IR|data[0..31]           ; Stuck at GND due to stuck port data_in                  ;
+; cpu:cpu|cpu_datapath:datapath|register:marreg|data[0..4]  ; Lost fanout                                             ;
+; cpu:cpu|cpu_datapath:datapath|pc_register:pc|data[0,1]    ; Stuck at GND due to stuck port data_in                  ;
+; cpu:cpu|cpu_control:control|state.s_reg                   ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state.jal                     ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state.s_jalr                  ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~4                 ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~5                 ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~6                 ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~7                 ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~8                 ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~9                 ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~10                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~11                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~12                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~13                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~14                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~15                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~16                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~17                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~18                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~19                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~20                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~21                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~22                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~23                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~24                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~25                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~26                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~27                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~28                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~29                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~30                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~31                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~32                ; Lost fanout                                             ;
+; cache:cache|cache_control:control|state~33                ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~2                       ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~3                       ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~4                       ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~5                       ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~6                       ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~7                       ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~8                       ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~9                       ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~10                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~11                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~12                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~13                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~14                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~15                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~16                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~17                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~18                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~19                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~20                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~21                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~22                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~23                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~24                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~25                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~26                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~27                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~28                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~29                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~30                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~31                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~32                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state~33                      ; Lost fanout                                             ;
+; cpu:cpu|cpu_control:control|state.s_imm                   ; Stuck at GND due to stuck port data_in                  ;
+; cpu:cpu|cpu_control:control|state.br                      ; Stuck at GND due to stuck port data_in                  ;
+; cpu:cpu|cpu_control:control|state.str2                    ; Stuck at GND due to stuck port data_in                  ;
+; cpu:cpu|cpu_control:control|state.s_lui                   ; Stuck at GND due to stuck port data_in                  ;
+; cpu:cpu|cpu_control:control|state.s_auipc                 ; Stuck at GND due to stuck port data_in                  ;
+; cpu:cpu|cpu_control:control|state.ldr1                    ; Merged with cpu:cpu|cpu_control:control|state.calc_addr ;
+; cpu:cpu|cpu_control:control|state.str1                    ; Merged with cpu:cpu|cpu_control:control|state.calc_addr ;
+; cpu:cpu|cpu_control:control|state.calc_addr               ; Stuck at GND due to stuck port data_in                  ;
+; cpu:cpu|cpu_control:control|state.ldr2                    ; Stuck at GND due to stuck port data_in                  ;
+; Total Number of Removed Registers = 145                   ;                                                         ;
++-----------------------------------------------------------+---------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                               ;
++--------------------------------------------------------+---------------------------+------------------------------------------------------+
+; Register name                                          ; Reason for Removal        ; Registers Removed due to This Register               ;
++--------------------------------------------------------+---------------------------+------------------------------------------------------+
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[7]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[7],         ;
+;                                                        ; due to stuck port data_in ; cpu:cpu|cpu_datapath:datapath|pc_register:pc|data[0] ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[8]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[8]          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[6]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[6]          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[5]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[5]          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[4]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[4]          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[3]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[3]          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[2]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[2]          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[1]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[1]          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[0]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[0]          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[9]  ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[9]          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[10] ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[10]         ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[11] ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|ir:IR|data[11]         ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_datapath:datapath|ir:IR|data[15]           ; Stuck at GND              ; cpu:cpu|cpu_datapath:datapath|pc_register:pc|data[1] ;
+;                                                        ; due to stuck port data_in ;                                                      ;
+; cpu:cpu|cpu_control:control|state.s_imm                ; Stuck at GND              ; cpu:cpu|cpu_control:control|state.calc_addr          ;
+;                                                        ; due to stuck port data_in ;                                                      ;
++--------------------------------------------------------+---------------------------+------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 472   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 457   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------+
+; Inverted Register Statistics                                   ;
++------------------------------------------------------+---------+
+; Inverted Register                                    ; Fan out ;
++------------------------------------------------------+---------+
+; cpu:cpu|cpu_datapath:datapath|pc_register:pc|data[5] ; 2       ;
+; cpu:cpu|cpu_datapath:datapath|pc_register:pc|data[6] ; 2       ;
+; Total number of inverted registers = 2               ;         ;
++------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 28 bits   ; 56 ALUTs      ; 0 ALUTs              ; 56 ALUTs               ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|pc_register:pc|data[29] ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 2 ALUTs              ; 2 ALUTs                ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|pc_register:pc|data[5]  ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cache:cache|cache_control:control|next_state          ;
+; 5:1                ; 10 bits   ; 30 ALUTs      ; 20 ALUTs             ; 10 ALUTs               ; No         ; |mp2|cpu:cpu|cpu_control:control|Selector32                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:pcmux ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:pcmux2 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:cmpmux ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:alumux1 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux2:marmux ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux8:alumux2 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|mux16:regfilemux ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|cmp:cmp_module|mux4:four_mux ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|pc_register:pc ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|register:mdrreg ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|register:marreg ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|register:mem_data_out ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:data_array0 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 256   ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:tag_array0 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:valid_array0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:dirty_array0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:data_array1 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 256   ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:tag_array1 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 24    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:valid_array1 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:dirty_array1 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:lru_module ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux2:cache_way_mux ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; width          ; 256   ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux2:outer_mux ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:frist_8mux ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:ssecond_8mux ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux2:outer_mux ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:frist_8mux ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:ssecond_8mux ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux2:outer_mux ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux16:frist_8mux ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux16:ssecond_8mux ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux2:outer_mux ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:frist_8mux ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:ssecond_8mux ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:cache|cache_datapath:datapath|mux2:cache_way_mux" ;
++------+-------+----------+----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                  ;
++------+-------+----------+----------------------------------------------------------+
+; a    ; Input ; Info     ; Explicitly unconnected                                   ;
+; b    ; Input ; Info     ; Explicitly unconnected                                   ;
++------+-------+----------+----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:cache|cache_datapath:datapath|array:data_array1"                                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; dataout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:cache|cache_datapath:datapath|array:data_array0"                                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; dataout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "cpu:cpu|cpu_datapath:datapath|mux16:regfilemux" ;
++--------------+-------+----------+------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                  ;
++--------------+-------+----------+------------------------------------------+
+; one[31..1]   ; Input ; Info     ; Stuck at GND                             ;
+; six[31..16]  ; Input ; Info     ; Stuck at GND                             ;
+; eight[31..8] ; Input ; Info     ; Stuck at GND                             ;
++--------------+-------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "cpu:cpu|cpu_datapath:datapath|mux2:pcmux2" ;
++------+-------+----------+---------------------------------------------+
+; Port ; Type  ; Severity ; Details                                     ;
++------+-------+----------+---------------------------------------------+
+; b[0] ; Input ; Info     ; Stuck at GND                                ;
++------+-------+----------+---------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
+    Info: Processing started: Sun Sep 30 23:50:34 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp2 -c mp2
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mux32.sv
+    Info (12023): Found entity 1: mux32
+Info (12021): Found 1 design units, including 1 entities, in source file physical_memory.sv
+    Info (12023): Found entity 1: physical_memory
+Info (12021): Found 1 design units, including 1 entities, in source file mp2_tb.sv
+    Info (12023): Found entity 1: mp2_tb
+Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
+    Info (12023): Found entity 1: comparator
+Info (12021): Found 1 design units, including 1 entities, in source file cache_datapath.sv
+    Info (12023): Found entity 1: cache_datapath
+Info (12021): Found 1 design units, including 1 entities, in source file cache_control.sv
+    Info (12023): Found entity 1: cache_control
+Info (12021): Found 1 design units, including 1 entities, in source file cache.sv
+    Info (12023): Found entity 1: cache
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_datapath.sv
+    Info (12023): Found entity 1: cpu_datapath
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_control.sv
+    Info (12023): Found entity 1: cpu_control
+Info (12021): Found 1 design units, including 1 entities, in source file array.sv
+    Info (12023): Found entity 1: array
+Info (12021): Found 1 design units, including 1 entities, in source file mux16.sv
+    Info (12023): Found entity 1: mux16
+Info (12021): Found 1 design units, including 1 entities, in source file mp2.sv
+    Info (12023): Found entity 1: mp2
+Info (12021): Found 1 design units, including 0 entities, in source file rv32i_types.sv
+    Info (12022): Found design unit 1: rv32i_types (SystemVerilog)
+Info (12021): Found 1 design units, including 1 entities, in source file register.sv
+    Info (12023): Found entity 1: register
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
+    Info (12023): Found entity 1: regfile
+Info (12021): Found 1 design units, including 1 entities, in source file pc_reg.sv
+    Info (12023): Found entity 1: pc_register
+Info (12021): Found 1 design units, including 1 entities, in source file ir.sv
+    Info (12023): Found entity 1: ir
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: alu
+Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
+    Info (12023): Found entity 1: mux2
+Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
+    Info (12023): Found entity 1: mux4
+Info (12021): Found 1 design units, including 1 entities, in source file cmp.sv
+    Info (12023): Found entity 1: cmp
+Info (12021): Found 1 design units, including 1 entities, in source file mux8.sv
+    Info (12023): Found entity 1: mux8
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.sv
+    Info (12023): Found entity 1: cpu
+Info (12127): Elaborating entity "mp2" for the top level hierarchy
+Info (12128): Elaborating entity "cpu" for hierarchy "cpu:cpu"
+Info (12128): Elaborating entity "cpu_control" for hierarchy "cpu:cpu|cpu_control:control"
+Info (10264): Verilog HDL Case Statement information at cpu_control.sv(288): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu:cpu|cpu_datapath:datapath"
+Info (12128): Elaborating entity "mux2" for hierarchy "cpu:cpu|cpu_datapath:datapath|mux2:pcmux"
+Info (12128): Elaborating entity "mux8" for hierarchy "cpu:cpu|cpu_datapath:datapath|mux8:alumux2"
+Info (12128): Elaborating entity "mux16" for hierarchy "cpu:cpu|cpu_datapath:datapath|mux16:regfilemux"
+Info (12128): Elaborating entity "alu" for hierarchy "cpu:cpu|cpu_datapath:datapath|alu:alu_module"
+Info (12128): Elaborating entity "cmp" for hierarchy "cpu:cpu|cpu_datapath:datapath|cmp:cmp_module"
+Info (12128): Elaborating entity "mux4" for hierarchy "cpu:cpu|cpu_datapath:datapath|cmp:cmp_module|mux4:four_mux"
+Info (12128): Elaborating entity "pc_register" for hierarchy "cpu:cpu|cpu_datapath:datapath|pc_register:pc"
+Info (12128): Elaborating entity "ir" for hierarchy "cpu:cpu|cpu_datapath:datapath|ir:IR"
+Info (12128): Elaborating entity "regfile" for hierarchy "cpu:cpu|cpu_datapath:datapath|regfile:regfile"
+Info (12128): Elaborating entity "register" for hierarchy "cpu:cpu|cpu_datapath:datapath|register:mdrreg"
+Info (12128): Elaborating entity "cache" for hierarchy "cache:cache"
+Info (12128): Elaborating entity "cache_control" for hierarchy "cache:cache|cache_control:control"
+Info (10264): Verilog HDL Case Statement information at cache_control.sv(82): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:cache|cache_datapath:datapath"
+Warning (10230): Verilog HDL assignment warning at cache_datapath.sv(64): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at cache_datapath.sv(65): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at cache_datapath.sv(66): truncated value with size 32 to match size of target (6)
+Warning (10034): Output port "pmem_wdata" at cache_datapath.sv(35) has no driver
+Info (12128): Elaborating entity "array" for hierarchy "cache:cache|cache_datapath:datapath|array:data_array0"
+Info (12128): Elaborating entity "array" for hierarchy "cache:cache|cache_datapath:datapath|array:tag_array0"
+Info (12128): Elaborating entity "array" for hierarchy "cache:cache|cache_datapath:datapath|array:valid_array0"
+Info (12128): Elaborating entity "comparator" for hierarchy "cache:cache|cache_datapath:datapath|comparator:compare_0"
+Info (12128): Elaborating entity "mux2" for hierarchy "cache:cache|cache_datapath:datapath|mux2:cache_way_mux"
+Info (12128): Elaborating entity "mux32" for hierarchy "cache:cache|cache_datapath:datapath|mux32:zero_byte_mux"
+Info (12128): Elaborating entity "mux2" for hierarchy "cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux2:outer_mux"
+Info (12128): Elaborating entity "mux16" for hierarchy "cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:frist_8mux"
+Info (276014): Found 5 instances of uninferred RAM logic
+    Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:valid_array0|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:valid_array1|data" is uninferred due to inappropriate RAM size
+    Info (276006): RAM logic "cache:cache|cache_datapath:datapath|array:tag_array0|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
+    Info (276006): RAM logic "cache:cache|cache_datapath:datapath|array:tag_array1|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
+    Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:lru_module|data" is uninferred due to inappropriate RAM size
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pmem_write" is stuck at GND
+    Warning (13410): Pin "pmem_address[0]" is stuck at GND
+    Warning (13410): Pin "pmem_address[1]" is stuck at GND
+    Warning (13410): Pin "pmem_address[2]" is stuck at GND
+    Warning (13410): Pin "pmem_address[3]" is stuck at GND
+    Warning (13410): Pin "pmem_address[31]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[0]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[1]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[2]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[3]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[4]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[5]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[6]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[7]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[8]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[9]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[10]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[11]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[12]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[13]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[14]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[15]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[16]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[17]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[18]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[19]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[20]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[21]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[22]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[23]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[24]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[25]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[26]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[27]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[28]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[29]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[30]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[31]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[32]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[33]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[34]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[35]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[36]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[37]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[38]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[39]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[40]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[41]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[42]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[43]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[44]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[45]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[46]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[47]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[48]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[49]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[50]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[51]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[52]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[53]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[54]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[55]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[56]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[57]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[58]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[59]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[60]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[61]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[62]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[63]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[64]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[65]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[66]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[67]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[68]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[69]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[70]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[71]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[72]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[73]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[74]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[75]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[76]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[77]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[78]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[79]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[80]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[81]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[82]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[83]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[84]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[85]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[86]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[87]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[88]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[89]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[90]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[91]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[92]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[93]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[94]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[95]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[96]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[97]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[98]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[99]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[100]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[101]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[102]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[103]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[104]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[105]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[106]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[107]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[108]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[109]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[110]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[111]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[112]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[113]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[114]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[115]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[116]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[117]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[118]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[119]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[120]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[121]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[122]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[123]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[124]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[125]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[126]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[127]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[128]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[129]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[130]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[131]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[132]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[133]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[134]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[135]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[136]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[137]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[138]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[139]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[140]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[141]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[142]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[143]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[144]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[145]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[146]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[147]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[148]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[149]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[150]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[151]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[152]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[153]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[154]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[155]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[156]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[157]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[158]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[159]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[160]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[161]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[162]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[163]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[164]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[165]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[166]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[167]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[168]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[169]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[170]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[171]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[172]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[173]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[174]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[175]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[176]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[177]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[178]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[179]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[180]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[181]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[182]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[183]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[184]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[185]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[186]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[187]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[188]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[189]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[190]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[191]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[192]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[193]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[194]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[195]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[196]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[197]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[198]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[199]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[200]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[201]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[202]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[203]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[204]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[205]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[206]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[207]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[208]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[209]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[210]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[211]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[212]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[213]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[214]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[215]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[216]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[217]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[218]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[219]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[220]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[221]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[222]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[223]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[224]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[225]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[226]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[227]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[228]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[229]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[230]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[231]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[232]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[233]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[234]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[235]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[236]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[237]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[238]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[239]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[240]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[241]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[242]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[243]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[244]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[245]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[246]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[247]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[248]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[249]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[250]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[251]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[252]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[253]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[254]" is stuck at GND
+    Warning (13410): Pin "pmem_wdata[255]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 70 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/cwu72/ece411/mp2/output_files/mp2.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 256 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pmem_rdata[0]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[1]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[2]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[3]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[4]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[5]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[6]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[7]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[8]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[9]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[10]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[11]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[12]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[13]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[14]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[15]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[16]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[17]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[18]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[19]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[20]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[21]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[22]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[23]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[24]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[25]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[26]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[27]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[28]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[29]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[30]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[31]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[32]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[33]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[34]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[35]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[36]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[37]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[38]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[39]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[40]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[41]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[42]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[43]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[44]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[45]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[46]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[47]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[48]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[49]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[50]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[51]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[52]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[53]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[54]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[55]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[56]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[57]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[58]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[59]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[60]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[61]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[62]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[63]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[64]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[65]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[66]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[67]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[68]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[69]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[70]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[71]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[72]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[73]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[74]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[75]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[76]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[77]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[78]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[79]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[80]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[81]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[82]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[83]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[84]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[85]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[86]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[87]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[88]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[89]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[90]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[91]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[92]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[93]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[94]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[95]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[96]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[97]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[98]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[99]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[100]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[101]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[102]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[103]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[104]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[105]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[106]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[107]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[108]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[109]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[110]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[111]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[112]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[113]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[114]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[115]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[116]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[117]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[118]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[119]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[120]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[121]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[122]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[123]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[124]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[125]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[126]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[127]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[128]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[129]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[130]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[131]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[132]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[133]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[134]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[135]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[136]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[137]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[138]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[139]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[140]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[141]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[142]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[143]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[144]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[145]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[146]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[147]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[148]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[149]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[150]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[151]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[152]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[153]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[154]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[155]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[156]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[157]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[158]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[159]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[160]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[161]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[162]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[163]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[164]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[165]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[166]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[167]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[168]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[169]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[170]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[171]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[172]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[173]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[174]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[175]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[176]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[177]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[178]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[179]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[180]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[181]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[182]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[183]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[184]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[185]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[186]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[187]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[188]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[189]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[190]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[191]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[192]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[193]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[194]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[195]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[196]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[197]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[198]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[199]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[200]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[201]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[202]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[203]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[204]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[205]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[206]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[207]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[208]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[209]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[210]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[211]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[212]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[213]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[214]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[215]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[216]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[217]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[218]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[219]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[220]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[221]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[222]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[223]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[224]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[225]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[226]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[227]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[228]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[229]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[230]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[231]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[232]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[233]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[234]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[235]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[236]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[237]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[238]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[239]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[240]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[241]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[242]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[243]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[244]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[245]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[246]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[247]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[248]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[249]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[250]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[251]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[252]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[253]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[254]"
+    Warning (15610): No output dependent on input pin "pmem_rdata[255]"
+Info (21057): Implemented 1171 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 258 input pins
+    Info (21059): Implemented 290 output pins
+    Info (21061): Implemented 623 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 524 warnings
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Sun Sep 30 23:50:40 2018
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/cwu72/ece411/mp2/output_files/mp2.map.smsg.
+
+

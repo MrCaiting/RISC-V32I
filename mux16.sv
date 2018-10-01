@@ -42,7 +42,7 @@ begin
 	else if (sel == 4'b1111)	// 15
 		 out = fift;
 	else
-		 out = {width{1'bX}}	// else output invalid signal
+		 out = {width{1'bX}};	// else output invalid signal
 end
 
 endmodule: mux16

@@ -5,7 +5,7 @@ module cache_control
     input clk,
 
     /* Signals from CPU */
-    input rv32rv32i_mem_wmask mem_byte_enable,
+    input rv32i_mem_wmask mem_byte_enable,
     input mem_read,
     input mem_write,
 
@@ -102,7 +102,7 @@ begin : state_actions
                 else begin      // If we missed
                     mem_resp = 0;
                     way_sel = 0;
-                    LRU_input = 0;
+                    lru_in = 0;
                     load_lru = 0;
                 end
 
@@ -155,7 +155,7 @@ begin : next_state_logic
 
             else if (valid_out_0 == 1 && valid_out_1 == 1) /* If both ways are valid */
                 // TODO: Need Update for Final CP
-
+				;
             else
                 next_state = access_pmem;
         end

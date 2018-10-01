@@ -5,7 +5,7 @@ module cache
     input clk,
 
     /* Signals from CPU */
-    input rv32rv32i_mem_wmask mem_byte_enable,
+    input rv32i_mem_wmask mem_byte_enable,
     input rv32i_word mem_address,
     input rv32i_word mem_wdata,
     input mem_read,
@@ -69,7 +69,7 @@ cache_control control
     .lru_in
     );
 
-module cache_datapath
+cache_datapath datapath
 (
     .clk,
     .mem_byte_enable,

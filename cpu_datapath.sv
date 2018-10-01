@@ -181,7 +181,7 @@ pc_register pc
 );
 
 /*IR*/
-ir instruct_register
+ir IR
 (
 	.clk,
 	.load(load_ir),
@@ -200,7 +200,7 @@ ir instruct_register
 );
 
 /*REG FILE*/
-regfile register_file
+regfile regfile
 (
 	.clk,
 	.load(load_regfile),
@@ -239,4 +239,4 @@ register mem_data_out
 	.out(mem_wdata)
 );
 
-endmodule : datapath
+endmodule : cpu_datapath

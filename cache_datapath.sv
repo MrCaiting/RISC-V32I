@@ -5,7 +5,7 @@ module cache_datapath
     input clk,
 
     /* Signals from CPU */
-    input rv32rv32i_mem_wmask mem_byte_enable,
+    input rv32i_mem_wmask mem_byte_enable,
     input rv32i_word mem_address,
     input rv32i_word mem_wdata,
 
@@ -188,8 +188,7 @@ mux32 zero_byte_mux
     .k(cache_mux_out[87:80]), .l(cache_mux_out[95:88]),
     .m(cache_mux_out[103:96]), .n(cache_mux_out[111:104]),
     .o(cache_mux_out[119:112]), .p(cache_mux_out[127:120]),
-    // Next 16 inputs
-    .a1(cache_mux_out[135:128]), .b1(cache_mux_out[143:136]]),
+    .a1(cache_mux_out[135:128]), .b1(cache_mux_out[143:136]),
     .c1(cache_mux_out[151:144]), .d1(cache_mux_out[159:152]),
     .e1(cache_mux_out[167:160]), .f1(cache_mux_out[175:168]),
     .g1(cache_mux_out[183:176]), .h1(cache_mux_out[191:184]),
@@ -212,7 +211,7 @@ mux32 second_byte_mux
     .m(cache_mux_out[103:96]), .n(cache_mux_out[111:104]),
     .o(cache_mux_out[119:112]), .p(cache_mux_out[127:120]),
     // Next 16 inputs
-    .a1(cache_mux_out[135:128]), .b1(cache_mux_out[143:136]]),
+    .a1(cache_mux_out[135:128]), .b1(cache_mux_out[143:136]),
     .c1(cache_mux_out[151:144]), .d1(cache_mux_out[159:152]),
     .e1(cache_mux_out[167:160]), .f1(cache_mux_out[175:168]),
     .g1(cache_mux_out[183:176]), .h1(cache_mux_out[191:184]),
@@ -235,7 +234,7 @@ mux32 third_byte_mux
     .m(cache_mux_out[103:96]), .n(cache_mux_out[111:104]),
     .o(cache_mux_out[119:112]), .p(cache_mux_out[127:120]),
     // Next 16 inputs
-    .a1(cache_mux_out[135:128]), .b1(cache_mux_out[143:136]]),
+    .a1(cache_mux_out[135:128]), .b1(cache_mux_out[143:136]),
     .c1(cache_mux_out[151:144]), .d1(cache_mux_out[159:152]),
     .e1(cache_mux_out[167:160]), .f1(cache_mux_out[175:168]),
     .g1(cache_mux_out[183:176]), .h1(cache_mux_out[191:184]),
@@ -258,7 +257,7 @@ mux32 forth_byte_mux
     .m(cache_mux_out[103:96]), .n(cache_mux_out[111:104]),
     .o(cache_mux_out[119:112]), .p(cache_mux_out[127:120]),
     // Next 16 inputs
-    .a1(cache_mux_out[135:128]), .b1(cache_mux_out[143:136]]),
+    .a1(cache_mux_out[135:128]), .b1(cache_mux_out[143:136]),
     .c1(cache_mux_out[151:144]), .d1(cache_mux_out[159:152]),
     .e1(cache_mux_out[167:160]), .f1(cache_mux_out[175:168]),
     .g1(cache_mux_out[183:176]), .h1(cache_mux_out[191:184]),
