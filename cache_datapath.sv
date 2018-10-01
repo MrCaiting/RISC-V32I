@@ -55,15 +55,17 @@ logic [23:0] tag_in;
 logic [23:0] tag_0, tag_1;
 logic [255:0] data_0, data_1;
 logic [255:0] cache_mux_out;
-logic [5:0] one_sel, two_sel, three_sel;
+logic [4:0] one_sel, two_sel, three_sel;
 
 /* Signals assignment */
 assign tag_in = mem_address[31:8];
 assign index = mem_address[7:5];
 assign byte_offset = mem_address[4:0];
-assign one_sel = byte_offset + 1;
-assign two_sel = byte_offset + 2;
-assign three_sel = byte_offset + 3;
+
+assign one_sel = byte_offset + 5'd1;
+assign two_sel = byte_offset + 5'd2;
+assign three_sel = byte_offset + 5'd3;
+
 assign pmem_address = {mem_address[31:5], 5'b00000};
 
 /* The cache way 0 */
