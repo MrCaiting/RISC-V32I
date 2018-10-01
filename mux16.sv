@@ -37,10 +37,12 @@ begin
 		 out = twelve;
 	else if (sel == 4'b1101)	// 13
 		 out = thirt;
-	else if (sel == 4'b0110)	// 14
+	else if (sel == 4'b1110)	// 14
 		 out = fourte;
-	else						// 15
+	else if (sel == 4'b1111)	// 15
 		 out = fift;
+	else
+		 out = {width{1'bX}}	// else output invalid signal
 end
 
 endmodule: mux16

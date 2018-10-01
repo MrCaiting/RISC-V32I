@@ -66,7 +66,6 @@ typedef logic [3:0] rv32i_mem_wmask;
 typedef logic [23:0] rv32i_cache_tag;
 typedef logic [2:0] rv32i_cache_index;
 typedef logic [4:0] rv32i_cache_offset;
-typedef logic [255:0] rv32i_cache_d_width;
+typedef logic [255:0] rv32i_cacheline;
 
 endpackage : rv32i_types
-
