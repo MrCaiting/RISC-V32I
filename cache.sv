@@ -13,11 +13,11 @@ module cache
 
     /* Signals from P-memory */
     input pmem_resp,
-    input rv32i_cacheline pmem_rdata,
+    input [255:0] pmem_rdata,
 
     /* Signals to P-memory */
     output rv32i_word pmem_address,
-    output rv32i_cacheline pmem_wdata,
+    output logic [255:0] pmem_wdata,
     output logic pmem_read,
     output logic pmem_write,
 

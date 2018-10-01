@@ -49,13 +49,13 @@ module cache_datapath
     );
 
 /* All the necesssary internal signals */
-rv32i_cache_index index;
-rv32i_cache_offset byte_offset;
-rv32i_cache_tag tag_in;
-rv32i_cache_tag tag_0, tag_1;
-rv32i_cacheline data_0, data_1;
-rv32i_cacheline cache_mux_out;
-logic[5:0] one_sel, two_sel, three_sel;
+logic [2:0] index;
+logic [4:0] byte_offset;
+logic [23:0] tag_in;
+logic [23:0] tag_0, tag_1;
+logic [255:0] data_0, data_1;
+logic [255:0] cache_mux_out;
+logic [5:0] one_sel, two_sel, three_sel;
 
 /* Signals assignment */
 assign tag_in = mem_address[31:8];

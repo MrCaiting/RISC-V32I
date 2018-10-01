@@ -62,10 +62,4 @@ typedef logic [31:0] rv32i_word;
 typedef logic [4:0] rv32i_reg;
 typedef logic [3:0] rv32i_mem_wmask;
 
-// Added for cache
-typedef logic [23:0] rv32i_cache_tag;
-typedef logic [2:0] rv32i_cache_index;
-typedef logic [4:0] rv32i_cache_offset;
-typedef logic [255:0] rv32i_cacheline;
-
 endpackage : rv32i_types
