@@ -95,7 +95,7 @@ begin : state_actions
                 else if (hit_1 == 1) begin
                     mem_resp = 1;
                     way_sel = 1;
-                    LRU_input = 0;
+                    lru_in = 0;
                     load_lru = 1;
                 end
 
@@ -113,18 +113,17 @@ begin : state_actions
 
         access_pmem: begin
             pmem_read = 1;
-
+            valid_in = 1;
+            
             if (lru_out == 0) begin     // Accessing Cache Way 0
                 load_data_0 = 1;
                 load_tag_0 = 1;
-                valid_in = 1;
                 load_valid_0 = 1;
             end
 
             else if (lru_out == 1) begin     // Accessing Cache Way 1
                 load_data_1 = 1;
                 load_tag_1 = 1;
-                valid_in = 1;
                 load_valid_1 = 1;
             end
 
@@ -158,7 +157,7 @@ begin : next_state_logic
                 // TODO: Need Update for Final CP
 
             else
-                next_state = read_pmem;
+                next_state = access_pmem;
         end
 
         access_pmem: begin

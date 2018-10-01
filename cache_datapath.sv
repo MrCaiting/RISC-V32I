@@ -64,6 +64,7 @@ assign byte_offset = mem_address[4:0];
 assign one_sel = byte_offset + 1;
 assign two_sel = byte_offset + 2;
 assign three_sel = byte_offset + 3;
+assign pmem_address = {mem_address[31:5], 4'b0000};
 
 /* The cache way 0 */
 array data_array0
