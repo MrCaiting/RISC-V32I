@@ -173,8 +173,8 @@ array #(.width(1)) lru_module
 mux2 #(.width(256)) cache_way_mux
 (
     .sel(way_sel),
-    .a(data_array0),
-    .b(data_array1),
+    .a(data_0),
+    .b(data_1),
     .f(cache_mux_out)
     );
 
