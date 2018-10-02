@@ -155,7 +155,7 @@ begin : next_state_logic
 
             else if (valid_out_0 == 1 && valid_out_1 == 1) /* If both ways are valid */
                 // TODO: Need Update for Final CP
-				next_state = read_pmem;
+				next_state = access_pmem;	// Stay conflicted for now
             else
                 next_state = access_pmem;
         end

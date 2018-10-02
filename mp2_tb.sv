@@ -45,6 +45,7 @@ begin
         write_data = 256'hx;
         write = 0;
     end
+	if (halt) $finish;
 end
 
 

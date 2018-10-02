@@ -1,3 +1,4 @@
+# ERROR: No extended dataflow license exists
 # do mp2_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -203,3 +204,87 @@
 # Loading work.cache_datapath
 # Loading work.array
 # Loading work.comparator
+# Loading work.mux32
+# Loading work.physical_memory
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/mp2_tb/registers[0]
+add wave -position end  sim:/mp2_tb/registers[1]
+add wave -position end  sim:/mp2_tb/registers[2]
+add wave -position end  sim:/mp2_tb/registers[3]
+add wave -position end  sim:/mp2_tb/registers[4]
+add wave -position end  sim:/mp2_tb/registers[5]
+add wave -position end  sim:/mp2_tb/registers[6]
+add wave -position end  sim:/mp2_tb/registers[7]
+add wave -position end  sim:/mp2_tb/registers[8]
+add wave -position end  sim:/mp2_tb/registers[9]
+add wave -position end  sim:/mp2_tb/registers[10]
+add wave -position end  sim:/mp2_tb/registers[11]
+add wave -position end  sim:/mp2_tb/registers[12]
+add wave -position end  sim:/mp2_tb/registers[13]
+add wave -position end  sim:/mp2_tb/registers[14]
+add wave -position end  sim:/mp2_tb/registers[15]
+add wave -position end  sim:/mp2_tb/registers[16]
+add wave -position end  sim:/mp2_tb/registers[17]
+add wave -position end  sim:/mp2_tb/registers[18]
+add wave -position end  sim:/mp2_tb/registers[19]
+add wave -position end  sim:/mp2_tb/registers[20]
+add wave -position end  sim:/mp2_tb/registers[21]
+add wave -position end  sim:/mp2_tb/registers[22]
+add wave -position end  sim:/mp2_tb/registers[23]
+add wave -position end  sim:/mp2_tb/registers[24]
+add wave -position end  sim:/mp2_tb/registers[25]
+add wave -position end  sim:/mp2_tb/registers[26]
+add wave -position end  sim:/mp2_tb/registers[27]
+add wave -position end  sim:/mp2_tb/registers[28]
+add wave -position end  sim:/mp2_tb/registers[29]
+add wave -position end  sim:/mp2_tb/registers[30]
+add wave -position end  sim:/mp2_tb/registers[31]
+add wave -position 11  sim:/mp2_tb/dut/cpu/opcode
+add wave -position 12  sim:/mp2_tb/dut/cpu/control/state
+restart -f
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.rv32i_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.mux2
+# Loading work.mux8
+# Loading work.mux16
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.cmp_sv_unit
+# Loading work.cmp
+# Loading work.mux4
+# Loading work.pc_register
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.regfile
+# Loading work.register
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_control_sv_unit
+# Loading work.cache_control
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.array
+# Loading work.comparator
+# Loading work.mux32
+# Loading work.physical_memory
+run 40000ns
+# ** Note: $finish    : /home/cwu72/ece411/mp2/mp2_tb.sv(48)
+#    Time: 2785 ns  Iteration: 1  Instance: /mp2_tb
+# 1
+# Break in Module mp2_tb at /home/cwu72/ece411/mp2/mp2_tb.sv line 48
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
