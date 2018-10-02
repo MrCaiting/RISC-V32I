@@ -114,7 +114,7 @@ begin : state_actions
         access_pmem: begin
             pmem_read = 1;
             valid_in = 1;
-            
+
             if (lru_out == 0) begin     // Accessing Cache Way 0
                 load_data_0 = 1;
                 load_tag_0 = 1;
@@ -155,7 +155,7 @@ begin : next_state_logic
 
             else if (valid_out_0 == 1 && valid_out_1 == 1) /* If both ways are valid */
                 // TODO: Need Update for Final CP
-				;
+				next_state = read_pmem;
             else
                 next_state = access_pmem;
         end
