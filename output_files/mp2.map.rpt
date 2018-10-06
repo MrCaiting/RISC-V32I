@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp2
-Mon Oct  1 20:22:56 2018
+Sat Oct  6 18:07:58 2018
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -31,37 +31,41 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
  23. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|register:mdrreg
  24. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|register:marreg
  25. Parameter Settings for User Entity Instance: cpu:cpu|cpu_datapath:datapath|register:mem_data_out
- 26. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:data_array0
- 27. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:tag_array0
- 28. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:valid_array0
- 29. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:dirty_array0
- 30. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:data_array1
- 31. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:tag_array1
- 32. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:valid_array1
- 33. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:dirty_array1
- 34. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:lru_module
- 35. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux2:cache_way_mux
- 36. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux
- 37. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux2:outer_mux
- 38. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:frist_8mux
- 39. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:ssecond_8mux
- 40. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux
- 41. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux2:outer_mux
- 42. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:frist_8mux
- 43. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:ssecond_8mux
- 44. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux
- 45. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux2:outer_mux
- 46. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux16:frist_8mux
- 47. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux16:ssecond_8mux
- 48. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux
- 49. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux2:outer_mux
- 50. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:frist_8mux
- 51. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:ssecond_8mux
- 52. Port Connectivity Checks: "cpu:cpu|cpu_datapath:datapath|mux16:regfilemux"
- 53. Port Connectivity Checks: "cpu:cpu|cpu_datapath:datapath|mux2:pcmux2"
- 54. Elapsed Time Per Partition
- 55. Analysis & Synthesis Messages
- 56. Analysis & Synthesis Suppressed Messages
+ 26. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|register:pmem_reg
+ 27. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:data_array0
+ 28. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:tag_array0
+ 29. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:valid_array0
+ 30. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:dirty_array0
+ 31. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:data_array1
+ 32. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:tag_array1
+ 33. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:valid_array1
+ 34. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:dirty_array1
+ 35. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|array:lru_module
+ 36. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux2:cache_way_mux
+ 37. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux
+ 38. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux2:outer_mux
+ 39. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:frist_8mux
+ 40. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:ssecond_8mux
+ 41. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux
+ 42. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux2:outer_mux
+ 43. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:frist_8mux
+ 44. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:ssecond_8mux
+ 45. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux
+ 46. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux2:outer_mux
+ 47. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux16:frist_8mux
+ 48. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux16:ssecond_8mux
+ 49. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux
+ 50. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux2:outer_mux
+ 51. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:frist_8mux
+ 52. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:ssecond_8mux
+ 53. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux4:pmem_add_mux
+ 54. Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux2:data_mux
+ 55. Port Connectivity Checks: "cache:cache|cache_datapath:datapath|mux4:pmem_add_mux"
+ 56. Port Connectivity Checks: "cpu:cpu|cpu_datapath:datapath|mux16:regfilemux"
+ 57. Port Connectivity Checks: "cpu:cpu|cpu_datapath:datapath|mux2:pcmux2"
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
+ 60. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -87,16 +91,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Mon Oct  1 20:22:55 2018       ;
+; Analysis & Synthesis Status   ; Successful - Sat Oct  6 18:07:57 2018       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp2                                         ;
 ; Top-level Entity Name         ; mp2                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 3,262                                       ;
+;     Combinational ALUTs       ; 3,895                                       ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 5,674                                       ;
-; Total registers               ; 5674                                        ;
+;     Dedicated logic registers ; 5,979                                       ;
+; Total registers               ; 5979                                        ;
 ; Total pins                    ; 548                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
@@ -199,47 +203,46 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
-; Maximum used               ; 9           ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.2%      ;
-;     Processors 3-9         ; < 0.1%      ;
-;     Processors 10-24       ;   0.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path             ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
-; mux32.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux32.sv          ;         ;
-; comparator.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/comparator.sv     ;         ;
-; cache_datapath.sv                ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cache_datapath.sv ;         ;
-; cache_control.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cache_control.sv  ;         ;
-; cache.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cache.sv          ;         ;
-; cpu_datapath.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cpu_datapath.sv   ;         ;
-; cpu_control.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cpu_control.sv    ;         ;
-; array.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/array.sv          ;         ;
-; mux16.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux16.sv          ;         ;
-; mp2.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mp2.sv            ;         ;
-; rv32i_types.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/rv32i_types.sv    ;         ;
-; register.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/register.sv       ;         ;
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/regfile.sv        ;         ;
-; pc_reg.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/pc_reg.sv         ;         ;
-; ir.sv                            ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/ir.sv             ;         ;
-; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/alu.sv            ;         ;
-; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux2.sv           ;         ;
-; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux4.sv           ;         ;
-; cmp.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cmp.sv            ;         ;
-; mux8.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/mux8.sv           ;         ;
-; cpu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/ece411/mp2/cpu.sv            ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path            ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------+---------+
+; write_cache.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/write_cache.sv    ;         ;
+; mux32.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/mux32.sv          ;         ;
+; comparator.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/comparator.sv     ;         ;
+; cache_datapath.sv                ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/cache_datapath.sv ;         ;
+; cache_control.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/cache_control.sv  ;         ;
+; cache.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/cache.sv          ;         ;
+; cpu_datapath.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/cpu_datapath.sv   ;         ;
+; cpu_control.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/cpu_control.sv    ;         ;
+; array.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/array.sv          ;         ;
+; mux16.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/mux16.sv          ;         ;
+; mp2.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/mp2.sv            ;         ;
+; rv32i_types.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/rv32i_types.sv    ;         ;
+; register.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/register.sv       ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/regfile.sv        ;         ;
+; pc_reg.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/pc_reg.sv         ;         ;
+; ir.sv                            ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/ir.sv             ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/alu.sv            ;         ;
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/mux2.sv           ;         ;
+; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/mux4.sv           ;         ;
+; cmp.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/cmp.sv            ;         ;
+; mux8.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/mux8.sv           ;         ;
+; cpu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/cwu72/cwu72/mp2/cpu.sv            ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -247,34 +250,34 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 3262      ;
-;     -- Combinational ALUTs                    ; 3262      ;
+; Estimated ALUTs Used                          ; 3895      ;
+;     -- Combinational ALUTs                    ; 3895      ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 5674      ;
+; Dedicated logic registers                     ; 5979      ;
 ;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 1653      ;
-;     -- Due to unpartnered combinational logic ; 1653      ;
+; Estimated ALUTs Unavailable                   ; 1657      ;
+;     -- Due to unpartnered combinational logic ; 1657      ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 3262      ;
+; Total combinational functions                 ; 3895      ;
 ; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 1653      ;
-;     -- 6 input functions                      ; 660       ;
-;     -- 5 input functions                      ; 276       ;
-;     -- 4 input functions                      ; 220       ;
-;     -- <=3 input functions                    ; 453       ;
+;     -- 7 input functions                      ; 1657      ;
+;     -- 6 input functions                      ; 1345      ;
+;     -- 5 input functions                      ; 361       ;
+;     -- 4 input functions                      ; 247       ;
+;     -- <=3 input functions                    ; 285       ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 1514      ;
-;     -- extended LUT mode                      ; 1653      ;
+;     -- normal mode                            ; 2143      ;
+;     -- extended LUT mode                      ; 1657      ;
 ;     -- arithmetic mode                        ; 95        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 10036     ;
+; Estimated ALUT/register pairs used            ; 10545     ;
 ;                                               ;           ;
-; Total registers                               ; 5674      ;
-;     -- Dedicated logic registers              ; 5674      ;
+; Total registers                               ; 5979      ;
+;     -- Dedicated logic registers              ; 5979      ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -282,72 +285,81 @@ applicable agreement for further details.
 ; I/O pins                                      ; 548       ;
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 5674      ;
-; Total fan-out                                 ; 36791     ;
-; Average fan-out                               ; 3.67      ;
+; Maximum fan-out                               ; 5979      ;
+; Total fan-out                                 ; 42059     ;
+; Average fan-out                               ; 3.83      ;
 +-----------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+----------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
-+----------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
-; |mp2                             ; 3262 (16)         ; 5674 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 548  ; 0            ; |mp2                                                                              ; work         ;
-;    |cache:cache|                 ; 1795 (0)          ; 4507 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache                                                                  ; work         ;
-;       |cache_control:control|    ; 20 (20)           ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_control:control                                            ; work         ;
-;       |cache_datapath:datapath|  ; 1775 (3)          ; 4504 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath                                          ; work         ;
-;          |array:data_array0|     ; 512 (512)         ; 2048 (2048)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:data_array0                        ; work         ;
-;          |array:data_array1|     ; 512 (512)         ; 2048 (2048)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:data_array1                        ; work         ;
-;          |array:lru_module|      ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:lru_module                         ; work         ;
-;          |array:tag_array0|      ; 48 (48)           ; 192 (192)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:tag_array0                         ; work         ;
-;          |array:tag_array1|      ; 48 (48)           ; 192 (192)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:tag_array1                         ; work         ;
-;          |array:valid_array0|    ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:valid_array0                       ; work         ;
-;          |array:valid_array1|    ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:valid_array1                       ; work         ;
-;          |comparator:compare_1|  ; 11 (11)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|comparator:compare_1                     ; work         ;
-;          |mux2:cache_way_mux|    ; 256 (256)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux2:cache_way_mux                       ; work         ;
-;          |mux32:forth_byte_mux|  ; 89 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:forth_byte_mux                     ; work         ;
-;             |mux16:ssecond_8mux| ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:ssecond_8mux  ; work         ;
-;             |mux2:outer_mux|     ; 88 (88)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux2:outer_mux      ; work         ;
-;          |mux32:second_byte_mux| ; 90 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:second_byte_mux                    ; work         ;
-;             |mux16:frist_8mux|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:frist_8mux   ; work         ;
-;             |mux16:ssecond_8mux| ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:ssecond_8mux ; work         ;
-;             |mux2:outer_mux|     ; 88 (88)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux2:outer_mux     ; work         ;
-;          |mux32:third_byte_mux|  ; 88 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:third_byte_mux                     ; work         ;
-;             |mux2:outer_mux|     ; 88 (88)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux2:outer_mux      ; work         ;
-;          |mux32:zero_byte_mux|   ; 88 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:zero_byte_mux                      ; work         ;
-;             |mux2:outer_mux|     ; 88 (88)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux2:outer_mux       ; work         ;
-;    |cpu:cpu|                     ; 1451 (0)          ; 1167 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu                                                                      ; work         ;
-;       |cpu_control:control|      ; 55 (55)           ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_control:control                                                  ; work         ;
-;       |cpu_datapath:datapath|    ; 1396 (30)         ; 1152 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath                                                ; work         ;
-;          |alu:alu_module|        ; 377 (377)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module                                 ; work         ;
-;          |cmp:cmp_module|        ; 122 (107)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|cmp:cmp_module                                 ; work         ;
-;             |mux4:four_mux|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|cmp:cmp_module|mux4:four_mux                   ; work         ;
-;          |ir:IR|                 ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|ir:IR                                          ; work         ;
-;          |mux16:regfilemux|      ; 94 (94)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux                               ; work         ;
-;          |mux2:alumux1|          ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux2:alumux1                                   ; work         ;
-;          |mux2:cmpmux|           ; 25 (25)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux2:cmpmux                                    ; work         ;
-;          |mux2:pcmux2|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux2:pcmux2                                    ; work         ;
-;          |mux2:pcmux|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux2:pcmux                                     ; work         ;
-;          |mux8:alumux2|          ; 51 (51)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2                                   ; work         ;
-;          |pc_register:pc|        ; 3 (3)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|pc_register:pc                                 ; work         ;
-;          |regfile:regfile|       ; 631 (631)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|regfile:regfile                                ; work         ;
-;          |register:marreg|       ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|register:marreg                                ; work         ;
-;          |register:mdrreg|       ; 28 (28)           ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg                                ; work         ;
-+----------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
++------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
++------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; |mp2                               ; 3895 (20)         ; 5979 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 548  ; 0            ; |mp2                                                                              ; work         ;
+;    |cache:cache|                   ; 2408 (0)          ; 4779 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache                                                                  ; work         ;
+;       |cache_control:control|      ; 14 (14)           ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_control:control                                            ; work         ;
+;       |cache_datapath:datapath|    ; 2394 (3)          ; 4776 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath                                          ; work         ;
+;          |array:data_array0|       ; 512 (512)         ; 2048 (2048)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:data_array0                        ; work         ;
+;          |array:data_array1|       ; 512 (512)         ; 2048 (2048)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:data_array1                        ; work         ;
+;          |array:dirty_array0|      ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:dirty_array0                       ; work         ;
+;          |array:dirty_array1|      ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:dirty_array1                       ; work         ;
+;          |array:lru_module|        ; 11 (11)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:lru_module                         ; work         ;
+;          |array:tag_array0|        ; 60 (60)           ; 192 (192)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:tag_array0                         ; work         ;
+;          |array:tag_array1|        ; 56 (56)           ; 192 (192)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:tag_array1                         ; work         ;
+;          |array:valid_array0|      ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:valid_array0                       ; work         ;
+;          |array:valid_array1|      ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|array:valid_array1                       ; work         ;
+;          |comparator:compare_0|    ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|comparator:compare_0                     ; work         ;
+;          |comparator:compare_1|    ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|comparator:compare_1                     ; work         ;
+;          |mux2:cache_way_mux|      ; 256 (256)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux2:cache_way_mux                       ; work         ;
+;          |mux2:data_mux|           ; 532 (532)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux                            ; work         ;
+;          |mux32:forth_byte_mux|    ; 89 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:forth_byte_mux                     ; work         ;
+;             |mux16:ssecond_8mux|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux16:ssecond_8mux  ; work         ;
+;             |mux2:outer_mux|       ; 88 (88)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:forth_byte_mux|mux2:outer_mux      ; work         ;
+;          |mux32:second_byte_mux|   ; 90 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:second_byte_mux                    ; work         ;
+;             |mux16:frist_8mux|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:frist_8mux   ; work         ;
+;             |mux16:ssecond_8mux|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux16:ssecond_8mux ; work         ;
+;             |mux2:outer_mux|       ; 88 (88)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:second_byte_mux|mux2:outer_mux     ; work         ;
+;          |mux32:third_byte_mux|    ; 88 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:third_byte_mux                     ; work         ;
+;             |mux2:outer_mux|       ; 88 (88)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:third_byte_mux|mux2:outer_mux      ; work         ;
+;          |mux32:zero_byte_mux|     ; 89 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:zero_byte_mux                      ; work         ;
+;             |mux16:ssecond_8mux|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:ssecond_8mux   ; work         ;
+;             |mux2:outer_mux|       ; 88 (88)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux2:outer_mux       ; work         ;
+;          |mux4:pmem_add_mux|       ; 24 (24)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|mux4:pmem_add_mux                        ; work         ;
+;          |register:pmem_reg|       ; 0 (0)             ; 256 (256)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|register:pmem_reg                        ; work         ;
+;          |write_cache:write_cache| ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cache:cache|cache_datapath:datapath|write_cache:write_cache                  ; work         ;
+;    |cpu:cpu|                       ; 1467 (0)          ; 1200 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu                                                                      ; work         ;
+;       |cpu_control:control|        ; 50 (50)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_control:control                                                  ; work         ;
+;       |cpu_datapath:datapath|      ; 1417 (30)         ; 1184 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath                                                ; work         ;
+;          |alu:alu_module|          ; 376 (376)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module                                 ; work         ;
+;          |cmp:cmp_module|          ; 110 (95)          ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|cmp:cmp_module                                 ; work         ;
+;             |mux4:four_mux|        ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|cmp:cmp_module|mux4:four_mux                   ; work         ;
+;          |ir:IR|                   ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|ir:IR                                          ; work         ;
+;          |mux16:regfilemux|        ; 94 (94)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux                               ; work         ;
+;          |mux2:alumux1|            ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux2:alumux1                                   ; work         ;
+;          |mux2:cmpmux|             ; 25 (25)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux2:cmpmux                                    ; work         ;
+;          |mux2:pcmux2|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux2:pcmux2                                    ; work         ;
+;          |mux2:pcmux|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux2:pcmux                                     ; work         ;
+;          |mux8:alumux2|            ; 50 (50)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2                                   ; work         ;
+;          |pc_register:pc|          ; 3 (3)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|pc_register:pc                                 ; work         ;
+;          |regfile:regfile|         ; 667 (667)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|regfile:regfile                                ; work         ;
+;          |register:marreg|         ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|register:marreg                                ; work         ;
+;          |register:mdrreg|         ; 27 (27)           ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg                                ; work         ;
+;          |register:mem_data_out|   ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mem_data_out                          ; work         ;
++------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------+
-; State Machine - |mp2|cache:cache|cache_control:control|state          ;
-+-------------------+------------+-------------------+------------------+
-; Name              ; state.idle ; state.access_pmem ; state.read_write ;
-+-------------------+------------+-------------------+------------------+
-; state.idle        ; 0          ; 0                 ; 0                ;
-; state.read_write  ; 1          ; 0                 ; 1                ;
-; state.access_pmem ; 1          ; 1                 ; 0                ;
-+-------------------+------------+-------------------+------------------+
++-----------------------------------------------------------------------------+
+; State Machine - |mp2|cache:cache|cache_control:control|state                ;
++-------------------+------------------+-------------------+------------------+
+; Name              ; state.read_write ; state.access_pmem ; state.write_back ;
++-------------------+------------------+-------------------+------------------+
+; state.read_write  ; 0                ; 0                 ; 0                ;
+; state.write_back  ; 1                ; 0                 ; 1                ;
+; state.access_pmem ; 1                ; 1                 ; 0                ;
++-------------------+------------------+-------------------+------------------+
 
 
 Encoding Type:  One-Hot
@@ -375,76 +387,75 @@ Encoding Type:  One-Hot
 +-----------------+---------------+-------------+------------+------------+------------+------------+-----------------+--------------+-----------+----------+-------------+-------------+--------------+--------------+--------------+--------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                  ;
-+--------------------------------------------+----------------------------------------+
-; Register name                              ; Reason for Removal                     ;
-+--------------------------------------------+----------------------------------------+
-; cache:cache|cache_control:control|state~4  ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~5  ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~6  ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~7  ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~8  ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~9  ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~10 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~11 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~12 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~13 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~14 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~15 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~16 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~17 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~18 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~19 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~20 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~21 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~22 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~23 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~24 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~25 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~26 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~27 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~28 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~29 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~30 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~31 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~32 ; Lost fanout                            ;
-; cache:cache|cache_control:control|state~33 ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~2        ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~3        ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~4        ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~5        ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~6        ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~7        ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~8        ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~9        ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~10       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~11       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~12       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~13       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~14       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~15       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~16       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~17       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~18       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~19       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~20       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~21       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~22       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~23       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~24       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~25       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~26       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~27       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~28       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~29       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~30       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~31       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~32       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state~33       ; Lost fanout                            ;
-; cpu:cpu|cpu_control:control|state.str2     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 63     ;                                        ;
-+--------------------------------------------+----------------------------------------+
++-----------------------------------------------------------------+
+; Registers Removed During Synthesis                              ;
++--------------------------------------------+--------------------+
+; Register name                              ; Reason for Removal ;
++--------------------------------------------+--------------------+
+; cache:cache|cache_control:control|state~4  ; Lost fanout        ;
+; cache:cache|cache_control:control|state~5  ; Lost fanout        ;
+; cache:cache|cache_control:control|state~6  ; Lost fanout        ;
+; cache:cache|cache_control:control|state~7  ; Lost fanout        ;
+; cache:cache|cache_control:control|state~8  ; Lost fanout        ;
+; cache:cache|cache_control:control|state~9  ; Lost fanout        ;
+; cache:cache|cache_control:control|state~10 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~11 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~12 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~13 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~14 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~15 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~16 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~17 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~18 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~19 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~20 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~21 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~22 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~23 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~24 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~25 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~26 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~27 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~28 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~29 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~30 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~31 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~32 ; Lost fanout        ;
+; cache:cache|cache_control:control|state~33 ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~2        ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~3        ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~4        ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~5        ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~6        ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~7        ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~8        ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~9        ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~10       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~11       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~12       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~13       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~14       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~15       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~16       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~17       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~18       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~19       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~20       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~21       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~22       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~23       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~24       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~25       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~26       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~27       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~28       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~29       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~30       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~31       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~32       ; Lost fanout        ;
+; cpu:cpu|cpu_control:control|state~33       ; Lost fanout        ;
+; Total Number of Removed Registers = 62     ;                    ;
++--------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -452,12 +463,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5674  ;
+; Total registers                              ; 5979  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 60    ;
+; Number of registers using Synchronous Load   ; 61    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5632  ;
+; Number of registers using Clock Enable       ; 5920  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -473,40 +484,74 @@ Encoding Type:  One-Hot
 +------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; 34:1               ; 8 bits    ; 176 ALUTs     ; 168 ALUTs            ; 8 ALUTs                ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[7]    ;
-; 32:1               ; 8 bits    ; 168 ALUTs     ; 168 ALUTs            ; 0 ALUTs                ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[15]   ;
-; 32:1               ; 8 bits    ; 168 ALUTs     ; 168 ALUTs            ; 0 ALUTs                ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[24]   ;
-; 32:1               ; 8 bits    ; 168 ALUTs     ; 168 ALUTs            ; 0 ALUTs                ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[23]   ;
-; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_control:control|regfilemux_sel               ;
-; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftLeft0  ;
-; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftRight1 ;
-; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftRight1 ;
-; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftRight0 ;
-; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftLeft0  ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cache:cache|cache_control:control|way_sel                ;
-; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_control:control|Selector10                   ;
-; 9:1                ; 6 bits    ; 36 ALUTs      ; 18 ALUTs             ; 18 ALUTs               ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux|out[4]    ;
-; 5:1                ; 6 bits    ; 18 ALUTs      ; 12 ALUTs             ; 6 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2|out[9]        ;
-; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2|out[16]       ;
-; 5:1                ; 11 bits   ; 33 ALUTs      ; 22 ALUTs             ; 11 ALUTs               ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2|out[29]       ;
-; 6:1                ; 4 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2|out[4]        ;
-; 12:1               ; 11 bits   ; 88 ALUTs      ; 88 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector8   ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector16  ;
-; 6:1                ; 2 bits    ; 8 ALUTs       ; 6 ALUTs              ; 2 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_control:control|Selector34                   ;
-; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_control:control|Selector32                   ;
-; 12:1               ; 4 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector24  ;
-; 14:1               ; 3 bits    ; 27 ALUTs      ; 27 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector2   ;
-; 13:1               ; 3 bits    ; 24 ALUTs      ; 24 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector30  ;
-; 7:1                ; 4 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux|out[11]   ;
-; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux|out[18]   ;
-; 9:1                ; 3 bits    ; 18 ALUTs      ; 12 ALUTs             ; 6 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux|out[14]   ;
-; 12:1               ; 3 bits    ; 24 ALUTs      ; 12 ALUTs             ; 12 ALUTs               ; No         ; |mp2|cpu:cpu|cpu_control:control|Selector6                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 34:1               ; 8 bits    ; 176 ALUTs     ; 168 ALUTs            ; 8 ALUTs                ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[2]      ;
+; 32:1               ; 8 bits    ; 168 ALUTs     ; 168 ALUTs            ; 0 ALUTs                ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[10]     ;
+; 32:1               ; 8 bits    ; 168 ALUTs     ; 168 ALUTs            ; 0 ALUTs                ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[28]     ;
+; 32:1               ; 8 bits    ; 168 ALUTs     ; 168 ALUTs            ; 0 ALUTs                ; Yes        ; |mp2|cpu:cpu|cpu_datapath:datapath|register:mdrreg|data[17]     ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cache:cache|cache_control:control|lru_in                   ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_control:control|regfilemux_sel                 ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[6]     ;
+; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftLeft0    ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftRight1   ;
+; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftRight1   ;
+; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftRight0   ;
+; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|ShiftLeft0    ;
+; 3:1                ; 3 bits    ; 6 ALUTs       ; 0 ALUTs              ; 6 ALUTs                ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux4:pmem_add_mux|f[5] ;
+; 3:1                ; 24 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux4:pmem_add_mux|f[8] ;
+; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_control:control|Selector10                     ;
+; 9:1                ; 6 bits    ; 36 ALUTs      ; 18 ALUTs             ; 18 ALUTs               ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux|out[5]      ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[9]     ;
+; 5:1                ; 6 bits    ; 18 ALUTs      ; 12 ALUTs             ; 6 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2|out[5]          ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2|out[17]         ;
+; 5:1                ; 11 bits   ; 33 ALUTs      ; 22 ALUTs             ; 11 ALUTs               ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2|out[24]         ;
+; 6:1                ; 4 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux8:alumux2|out[1]          ;
+; 7:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[16]    ;
+; 12:1               ; 11 bits   ; 88 ALUTs      ; 88 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector10    ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 56 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector23    ;
+; 6:1                ; 2 bits    ; 8 ALUTs       ; 6 ALUTs              ; 2 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_control:control|Selector34                     ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_control:control|Selector38                     ;
+; 9:1                ; 8 bits    ; 48 ALUTs      ; 32 ALUTs             ; 16 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[30]    ;
+; 12:1               ; 4 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector24    ;
+; 10:1               ; 8 bits    ; 48 ALUTs      ; 32 ALUTs             ; 16 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[39]    ;
+; 21:1               ; 8 bits    ; 112 ALUTs     ; 24 ALUTs             ; 88 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[253]   ;
+; 14:1               ; 3 bits    ; 27 ALUTs      ; 27 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector1     ;
+; 13:1               ; 3 bits    ; 24 ALUTs      ; 24 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|alu:alu_module|Selector30    ;
+; 7:1                ; 4 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux|out[11]     ;
+; 8:1                ; 16 bits   ; 80 ALUTs      ; 80 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux|out[17]     ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 32 ALUTs             ; 24 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[41]    ;
+; 22:1               ; 8 bits    ; 112 ALUTs     ; 32 ALUTs             ; 80 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[140]   ;
+; 22:1               ; 8 bits    ; 112 ALUTs     ; 32 ALUTs             ; 80 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[158]   ;
+; 22:1               ; 8 bits    ; 112 ALUTs     ; 32 ALUTs             ; 80 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[175]   ;
+; 22:1               ; 8 bits    ; 112 ALUTs     ; 32 ALUTs             ; 80 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[190]   ;
+; 22:1               ; 8 bits    ; 112 ALUTs     ; 32 ALUTs             ; 80 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[207]   ;
+; 22:1               ; 8 bits    ; 112 ALUTs     ; 32 ALUTs             ; 80 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[217]   ;
+; 22:1               ; 8 bits    ; 112 ALUTs     ; 32 ALUTs             ; 80 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[233]   ;
+; 9:1                ; 3 bits    ; 18 ALUTs      ; 12 ALUTs             ; 6 ALUTs                ; No         ; |mp2|cpu:cpu|cpu_datapath:datapath|mux16:regfilemux|out[13]     ;
+; 12:1               ; 8 bits    ; 64 ALUTs      ; 32 ALUTs             ; 32 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[49]    ;
+; 23:1               ; 8 bits    ; 120 ALUTs     ; 32 ALUTs             ; 88 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[144]   ;
+; 23:1               ; 8 bits    ; 120 ALUTs     ; 32 ALUTs             ; 88 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[167]   ;
+; 23:1               ; 8 bits    ; 120 ALUTs     ; 32 ALUTs             ; 88 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[182]   ;
+; 23:1               ; 8 bits    ; 120 ALUTs     ; 32 ALUTs             ; 88 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[196]   ;
+; 23:1               ; 8 bits    ; 120 ALUTs     ; 32 ALUTs             ; 88 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[211]   ;
+; 23:1               ; 8 bits    ; 120 ALUTs     ; 32 ALUTs             ; 88 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[229]   ;
+; 23:1               ; 8 bits    ; 120 ALUTs     ; 32 ALUTs             ; 88 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[242]   ;
+; 13:1               ; 8 bits    ; 64 ALUTs      ; 32 ALUTs             ; 32 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[63]    ;
+; 12:1               ; 3 bits    ; 24 ALUTs      ; 12 ALUTs             ; 12 ALUTs               ; No         ; |mp2|cpu:cpu|cpu_control:control|Selector6                      ;
+; 14:1               ; 8 bits    ; 72 ALUTs      ; 32 ALUTs             ; 40 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[71]    ;
+; 15:1               ; 8 bits    ; 80 ALUTs      ; 32 ALUTs             ; 48 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[130]   ;
+; 15:1               ; 8 bits    ; 80 ALUTs      ; 32 ALUTs             ; 48 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[73]    ;
+; 16:1               ; 8 bits    ; 80 ALUTs      ; 32 ALUTs             ; 48 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[87]    ;
+; 17:1               ; 8 bits    ; 88 ALUTs      ; 32 ALUTs             ; 56 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[93]    ;
+; 18:1               ; 8 bits    ; 96 ALUTs      ; 32 ALUTs             ; 64 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[98]    ;
+; 19:1               ; 8 bits    ; 96 ALUTs      ; 32 ALUTs             ; 64 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[107]   ;
+; 20:1               ; 8 bits    ; 104 ALUTs     ; 32 ALUTs             ; 72 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[113]   ;
+; 21:1               ; 8 bits    ; 112 ALUTs     ; 32 ALUTs             ; 80 ALUTs               ; No         ; |mp2|cache:cache|cache_datapath:datapath|mux2:data_mux|f[120]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -626,6 +671,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------------+
 ; width          ; 32    ; Signed Integer                                                          ;
 +----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|register:pmem_reg ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 256   ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -889,6 +944,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux4:pmem_add_mux ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:cache|cache_datapath:datapath|mux2:data_mux ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; width          ; 256   ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:cache|cache_datapath:datapath|mux4:pmem_add_mux" ;
++---------+-------+----------+------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                              ;
++---------+-------+----------+------------------------------------------------------+
+; a[4..0] ; Input ; Info     ; Stuck at GND                                         ;
+; b[4..0] ; Input ; Info     ; Stuck at GND                                         ;
+; c[4..0] ; Input ; Info     ; Stuck at GND                                         ;
++---------+-------+----------+------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------+
 ; Port Connectivity Checks: "cpu:cpu|cpu_datapath:datapath|mux16:regfilemux" ;
 +--------------+-------+----------+------------------------------------------+
@@ -914,7 +1000,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:19     ;
+; Top            ; 00:00:16     ;
 +----------------+--------------+
 
 
@@ -924,15 +1010,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Mon Oct  1 20:22:28 2018
+    Info: Processing started: Sat Oct  6 18:07:35 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp2 -c mp2
-Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file mux32.sv
-    Info (12023): Found entity 1: mux32
-Info (12021): Found 1 design units, including 1 entities, in source file physical_memory.sv
-    Info (12023): Found entity 1: physical_memory
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file write_cache.sv
+    Info (12023): Found entity 1: write_cache
 Info (12021): Found 1 design units, including 1 entities, in source file mp2_tb.sv
     Info (12023): Found entity 1: mp2_tb
+Info (12021): Found 1 design units, including 1 entities, in source file physical_memory.sv
+    Info (12023): Found entity 1: physical_memory
+Info (12021): Found 1 design units, including 1 entities, in source file mux32.sv
+    Info (12023): Found entity 1: mux32
 Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
     Info (12023): Found entity 1: comparator
 Info (12021): Found 1 design units, including 1 entities, in source file cache_datapath.sv
@@ -990,9 +1078,8 @@ Info (12128): Elaborating entity "regfile" for hierarchy "cpu:cpu|cpu_datapath:d
 Info (12128): Elaborating entity "register" for hierarchy "cpu:cpu|cpu_datapath:datapath|register:mdrreg"
 Info (12128): Elaborating entity "cache" for hierarchy "cache:cache"
 Info (12128): Elaborating entity "cache_control" for hierarchy "cache:cache|cache_control:control"
-Info (10264): Verilog HDL Case Statement information at cache_control.sv(82): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:cache|cache_datapath:datapath"
-Warning (10034): Output port "pmem_wdata" at cache_datapath.sv(35) has no driver
+Info (12128): Elaborating entity "register" for hierarchy "cache:cache|cache_datapath:datapath|register:pmem_reg"
 Info (12128): Elaborating entity "array" for hierarchy "cache:cache|cache_datapath:datapath|array:data_array0"
 Info (12128): Elaborating entity "array" for hierarchy "cache:cache|cache_datapath:datapath|array:tag_array0"
 Info (12128): Elaborating entity "array" for hierarchy "cache:cache|cache_datapath:datapath|array:valid_array0"
@@ -1001,297 +1088,44 @@ Info (12128): Elaborating entity "mux2" for hierarchy "cache:cache|cache_datapat
 Info (12128): Elaborating entity "mux32" for hierarchy "cache:cache|cache_datapath:datapath|mux32:zero_byte_mux"
 Info (12128): Elaborating entity "mux2" for hierarchy "cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux2:outer_mux"
 Info (12128): Elaborating entity "mux16" for hierarchy "cache:cache|cache_datapath:datapath|mux32:zero_byte_mux|mux16:frist_8mux"
-Info (276014): Found 8 instances of uninferred RAM logic
-    Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:valid_array0|data" is uninferred due to inappropriate RAM size
-    Info (276006): RAM logic "cache:cache|cache_datapath:datapath|array:tag_array0|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
-    Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:valid_array1|data" is uninferred due to inappropriate RAM size
-    Info (276006): RAM logic "cache:cache|cache_datapath:datapath|array:tag_array1|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
-    Info (276006): RAM logic "cpu:cpu|cpu_datapath:datapath|regfile:regfile|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
+Info (12128): Elaborating entity "mux4" for hierarchy "cache:cache|cache_datapath:datapath|mux4:pmem_add_mux"
+Info (12128): Elaborating entity "write_cache" for hierarchy "cache:cache|cache_datapath:datapath|write_cache:write_cache"
+Info (276014): Found 10 instances of uninferred RAM logic
     Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:lru_module|data" is uninferred due to inappropriate RAM size
+    Info (276006): RAM logic "cache:cache|cache_datapath:datapath|array:tag_array1|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
+    Info (276006): RAM logic "cache:cache|cache_datapath:datapath|array:tag_array0|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
+    Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:valid_array0|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:valid_array1|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:dirty_array1|data" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "cache:cache|cache_datapath:datapath|array:dirty_array0|data" is uninferred due to inappropriate RAM size
+    Info (276006): RAM logic "cpu:cpu|cpu_datapath:datapath|regfile:regfile|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
     Info (276006): RAM logic "cache:cache|cache_datapath:datapath|array:data_array1|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
     Info (276006): RAM logic "cache:cache|cache_datapath:datapath|array:data_array0|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "pmem_write" is stuck at GND
     Warning (13410): Pin "pmem_address[0]" is stuck at GND
     Warning (13410): Pin "pmem_address[1]" is stuck at GND
     Warning (13410): Pin "pmem_address[2]" is stuck at GND
     Warning (13410): Pin "pmem_address[3]" is stuck at GND
     Warning (13410): Pin "pmem_address[4]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[0]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[1]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[2]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[3]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[4]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[5]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[6]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[7]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[8]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[9]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[10]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[11]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[12]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[13]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[14]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[15]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[16]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[17]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[18]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[19]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[20]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[21]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[22]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[23]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[24]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[25]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[26]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[27]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[28]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[29]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[30]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[31]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[32]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[33]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[34]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[35]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[36]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[37]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[38]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[39]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[40]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[41]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[42]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[43]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[44]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[45]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[46]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[47]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[48]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[49]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[50]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[51]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[52]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[53]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[54]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[55]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[56]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[57]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[58]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[59]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[60]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[61]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[62]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[63]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[64]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[65]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[66]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[67]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[68]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[69]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[70]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[71]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[72]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[73]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[74]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[75]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[76]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[77]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[78]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[79]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[80]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[81]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[82]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[83]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[84]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[85]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[86]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[87]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[88]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[89]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[90]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[91]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[92]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[93]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[94]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[95]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[96]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[97]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[98]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[99]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[100]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[101]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[102]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[103]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[104]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[105]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[106]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[107]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[108]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[109]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[110]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[111]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[112]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[113]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[114]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[115]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[116]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[117]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[118]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[119]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[120]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[121]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[122]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[123]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[124]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[125]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[126]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[127]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[128]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[129]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[130]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[131]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[132]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[133]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[134]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[135]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[136]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[137]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[138]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[139]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[140]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[141]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[142]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[143]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[144]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[145]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[146]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[147]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[148]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[149]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[150]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[151]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[152]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[153]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[154]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[155]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[156]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[157]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[158]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[159]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[160]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[161]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[162]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[163]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[164]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[165]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[166]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[167]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[168]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[169]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[170]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[171]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[172]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[173]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[174]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[175]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[176]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[177]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[178]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[179]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[180]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[181]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[182]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[183]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[184]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[185]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[186]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[187]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[188]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[189]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[190]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[191]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[192]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[193]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[194]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[195]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[196]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[197]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[198]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[199]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[200]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[201]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[202]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[203]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[204]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[205]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[206]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[207]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[208]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[209]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[210]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[211]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[212]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[213]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[214]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[215]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[216]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[217]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[218]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[219]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[220]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[221]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[222]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[223]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[224]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[225]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[226]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[227]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[228]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[229]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[230]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[231]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[232]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[233]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[234]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[235]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[236]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[237]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[238]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[239]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[240]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[241]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[242]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[243]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[244]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[245]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[246]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[247]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[248]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[249]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[250]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[251]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[252]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[253]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[254]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[255]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 62 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /home/cwu72/ece411/mp2/output_files/mp2.map.smsg
+Info (144001): Generated suppressed messages file /home/cwu72/cwu72/mp2/output_files/mp2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9406 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10315 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 258 input pins
     Info (21059): Implemented 290 output pins
-    Info (21061): Implemented 8858 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 264 warnings
-    Info: Peak virtual memory: 517 megabytes
-    Info: Processing ended: Mon Oct  1 20:22:56 2018
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21061): Implemented 9767 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 499 megabytes
+    Info: Processing ended: Sat Oct  6 18:07:58 2018
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/cwu72/ece411/mp2/output_files/mp2.map.smsg.
+The suppressed messages can be found in /home/cwu72/cwu72/mp2/output_files/mp2.map.smsg.
 
 

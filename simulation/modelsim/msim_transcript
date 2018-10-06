@@ -10,81 +10,81 @@
 # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux32.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/mux32.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux32
 # 
 # Top level modules:
 # 	mux32
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/comparator.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/comparator.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module comparator
 # 
 # Top level modules:
 # 	comparator
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/array.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/array.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module array
 # 
 # Top level modules:
 # 	array
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux16.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/mux16.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux16
 # 
 # Top level modules:
 # 	mux16
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/rv32i_types.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/rv32i_types.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package rv32i_types
 # 
 # Top level modules:
 # 	--none--
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/register.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/register.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/regfile.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/regfile.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/pc_reg.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/pc_reg.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module pc_register
 # 
 # Top level modules:
 # 	pc_register
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux2.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/mux2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux4.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/mux4.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux4
 # 
 # Top level modules:
 # 	mux4
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mux8.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/mux8.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux8
 # 
 # Top level modules:
 # 	mux8
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cache_datapath.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/write_cache.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package cache_datapath_sv_unit
+# -- Compiling package write_cache_sv_unit
 # -- Importing package rv32i_types
-# -- Compiling module cache_datapath
+# -- Compiling module write_cache
 # 
 # Top level modules:
-# 	cache_datapath
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cache_control.sv}
+# 	write_cache
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/cache_control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_control_sv_unit
 # -- Importing package rv32i_types
@@ -92,7 +92,7 @@
 # 
 # Top level modules:
 # 	cache_control
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cpu_control.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/cpu_control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cpu_control_sv_unit
 # -- Importing package rv32i_types
@@ -100,7 +100,7 @@
 # 
 # Top level modules:
 # 	cpu_control
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/ir.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/ir.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package ir_sv_unit
 # -- Importing package rv32i_types
@@ -108,7 +108,7 @@
 # 
 # Top level modules:
 # 	ir
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/alu.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/alu.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package alu_sv_unit
 # -- Importing package rv32i_types
@@ -116,7 +116,7 @@
 # 
 # Top level modules:
 # 	alu
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cmp.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/cmp.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cmp_sv_unit
 # -- Importing package rv32i_types
@@ -124,15 +124,15 @@
 # 
 # Top level modules:
 # 	cmp
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cache.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/cache_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package cache_sv_unit
+# -- Compiling package cache_datapath_sv_unit
 # -- Importing package rv32i_types
-# -- Compiling module cache
+# -- Compiling module cache_datapath
 # 
 # Top level modules:
-# 	cache
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cpu_datapath.sv}
+# 	cache_datapath
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/cpu_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cpu_datapath_sv_unit
 # -- Importing package rv32i_types
@@ -140,7 +140,15 @@
 # 
 # Top level modules:
 # 	cpu_datapath
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/cpu.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_sv_unit
+# -- Importing package rv32i_types
+# -- Compiling module cache
+# 
+# Top level modules:
+# 	cache
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/cpu.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cpu_sv_unit
 # -- Importing package rv32i_types
@@ -148,7 +156,7 @@
 # 
 # Top level modules:
 # 	cpu
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mp2.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/mp2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mp2_sv_unit
 # -- Importing package rv32i_types
@@ -157,13 +165,13 @@
 # Top level modules:
 # 	mp2
 # 
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/mp2_tb.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/mp2_tb.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mp2_tb
 # 
 # Top level modules:
 # 	mp2_tb
-# vlog -sv -work work +incdir+/home/cwu72/ece411/mp2 {/home/cwu72/ece411/mp2/physical_memory.sv}
+# vlog -sv -work work +incdir+/home/cwu72/cwu72/mp2 {/home/cwu72/cwu72/mp2/physical_memory.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module physical_memory
 # 
@@ -205,6 +213,8 @@
 # Loading work.array
 # Loading work.comparator
 # Loading work.mux32
+# Loading work.write_cache_sv_unit
+# Loading work.write_cache
 # Loading work.physical_memory
 # 
 # add wave *
@@ -224,29 +234,14 @@ add wave -position end  sim:/mp2_tb/registers[7]
 add wave -position end  sim:/mp2_tb/registers[8]
 add wave -position end  sim:/mp2_tb/registers[9]
 add wave -position end  sim:/mp2_tb/registers[10]
-add wave -position end  sim:/mp2_tb/registers[11]
-add wave -position end  sim:/mp2_tb/registers[12]
-add wave -position end  sim:/mp2_tb/registers[13]
-add wave -position end  sim:/mp2_tb/registers[14]
-add wave -position end  sim:/mp2_tb/registers[15]
-add wave -position end  sim:/mp2_tb/registers[16]
-add wave -position end  sim:/mp2_tb/registers[17]
-add wave -position end  sim:/mp2_tb/registers[18]
-add wave -position end  sim:/mp2_tb/registers[19]
-add wave -position end  sim:/mp2_tb/registers[20]
-add wave -position end  sim:/mp2_tb/registers[21]
-add wave -position end  sim:/mp2_tb/registers[22]
-add wave -position end  sim:/mp2_tb/registers[23]
-add wave -position end  sim:/mp2_tb/registers[24]
-add wave -position end  sim:/mp2_tb/registers[25]
-add wave -position end  sim:/mp2_tb/registers[26]
-add wave -position end  sim:/mp2_tb/registers[27]
-add wave -position end  sim:/mp2_tb/registers[28]
-add wave -position end  sim:/mp2_tb/registers[29]
-add wave -position end  sim:/mp2_tb/registers[30]
-add wave -position end  sim:/mp2_tb/registers[31]
-add wave -position 11  sim:/mp2_tb/dut/cpu/opcode
-add wave -position 12  sim:/mp2_tb/dut/cpu/control/state
+add wave -position 11  sim:/mp2_tb/dut/cache/datapath/data_array1/data[7]
+add wave -position 12  sim:/mp2_tb/dut/cache/datapath/data_array1/data[6]
+add wave -position 13  sim:/mp2_tb/dut/cache/datapath/data_array1/data[5]
+add wave -position 14  sim:/mp2_tb/dut/cache/datapath/data_array1/data[4]
+add wave -position 15  sim:/mp2_tb/dut/cache/datapath/data_array1/data[3]
+add wave -position 16  sim:/mp2_tb/dut/cache/datapath/data_array1/data[2]
+add wave -position 17  sim:/mp2_tb/dut/cache/datapath/data_array1/data[1]
+add wave -position 18  sim:/mp2_tb/dut/cache/datapath/data_array1/data[0]
 restart -f
 # Loading sv_std.std
 # Loading work.mp2_tb
@@ -281,10 +276,11 @@ restart -f
 # Loading work.array
 # Loading work.comparator
 # Loading work.mux32
+# Loading work.write_cache_sv_unit
+# Loading work.write_cache
 # Loading work.physical_memory
-run 40000ns
-# ** Note: $finish    : /home/cwu72/ece411/mp2/mp2_tb.sv(48)
-#    Time: 2785 ns  Iteration: 1  Instance: /mp2_tb
+run 45000ns
+# ** Note: $finish    : /home/cwu72/cwu72/mp2/mp2_tb.sv(48)
+#    Time: 22245 ns  Iteration: 1  Instance: /mp2_tb
 # 1
-# Break in Module mp2_tb at /home/cwu72/ece411/mp2/mp2_tb.sv line 48
-# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
+# Break in Module mp2_tb at /home/cwu72/cwu72/mp2/mp2_tb.sv line 48

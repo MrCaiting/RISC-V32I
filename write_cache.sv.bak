@@ -1,0 +1,409 @@
+import rv32i_types::*;
+
+module write_cache
+(
+  input rv32i_mem_wmask mem_byte_mem_byte_enable,
+  input rv32i_word mem_wdata,
+  input logic [4:0] byte_offset,
+  input logic [255:0] cache_mux_out,
+  output logic [255:0] write_cache_out
+  );
+
+// assign write_cache_out = cache_mux_out;
+
+// logic [7:0] byte0, byte1, byte2, byte3;
+
+
+always_comb
+begin
+
+    write_cache_out = cache_mux_out;
+
+	 if(byte_offset == 5'b00000) //offset = 0
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[31:24] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[23:16] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[15:8] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[7:0] = mem_wdata[7:0];		  
+    end
+
+	 else if(byte_offset == 5'b00001) //offset = 1
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[39:32] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[31:24] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[23:16] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[15:8] = mem_wdata[7:0];
+    end
+
+	 else if(byte_offset == 5'b00010) //offset = 2
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[47:40] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[39:32] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[31:24] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[23:16] = mem_wdata[7:0];
+    end
+
+	 else if(byte_offset == 5'b00011) //offset = 3
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[55:48] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[47:40] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[39:32] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[31:24] = mem_wdata[7:0];
+    end
+
+	 else if(byte_offset == 5'b00100) //offset = 4
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[63:56] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[55:48] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[47:40] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[39:32] = mem_wdata[7:0];
+    end
+
+	 else if(byte_offset == 5'b00101) //offset = 5
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[71:64] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[63:56] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[55:48] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[47:40] = mem_wdata[7:0];
+    end
+
+	 else if(byte_offset == 5'b00110) //offset = 6
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[79:72] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[71:64] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[63:56] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[55:48] = mem_wdata[7:0];
+    end
+
+	  else if(byte_offset == 5'b00111) //offset = 7
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[87:80] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[79:72] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[71:64] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[63:56] = mem_wdata[7:0];
+    end
+
+	  else if(byte_offset == 5'b01000) //offset = 8
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[95:88] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[87:80] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[79:72] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[71:64] = mem_wdata[7:0];
+    end
+
+	   else if(byte_offset == 5'b01001) //offset = 9
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[103:96] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[95:88] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[87:80] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[79:72] = mem_wdata[7:0];
+    end
+
+	  else if(byte_offset == 5'b01010) //offset = 10
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[111:104] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[103:96] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[95:88] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[87:80] = mem_wdata[7:0];
+    end
+
+	 else if(byte_offset == 5'b01011) //offset = 11
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[119:112] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[111:104] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[103:96] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[95:88] = mem_wdata[7:0];
+    end
+
+	 	 else if(byte_offset == 5'b01100) //offset = 12
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[127:120] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[119:112] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[111:104] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[103:96] = mem_wdata[7:0];
+    end
+
+	  else if(byte_offset == 5'b01101) //offset = 13
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[135:128] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[127:120] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[119:112] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[111:104] = mem_wdata[7:0];
+    end
+
+	   else if(byte_offset == 5'b01110) //offset = 14
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[143:136] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[135:128] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[127:120] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[119:112] = mem_wdata[7:0];
+    end
+
+	  else if(byte_offset == 5'b01111) //offset = 15
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[151:144] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[143:136] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[135:128] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[127:120] = mem_wdata[7:0];
+    end
+
+	   else if(byte_offset == 5'b10000) //offset = 16
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[159:152] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[151:144] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[143:136] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[135:128] = mem_wdata[7:0];
+    end
+
+	    else if(byte_offset == 5'b10001) //offset = 17
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[167:160] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[159:152] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[151:144] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[143:136] = mem_wdata[7:0];
+    end
+
+	   else if(byte_offset == 5'b10010) //offset = 18
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[175:168] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[167:160] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[159:152] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[151:144] = mem_wdata[7:0];
+    end
+
+	 	   else if(byte_offset == 5'b10011) //offset = 19
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[183:176] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[175:168] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[167:160] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[159:152] = mem_wdata[7:0];
+    end
+
+	  else if(byte_offset == 5'b10100) //offset = 20
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[191:184] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[183:176] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[175:168] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[167:160] = mem_wdata[7:0];
+    end
+
+	   else if(byte_offset == 5'b10101) //offset = 21
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[199:192] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[191:184] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[183:176] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[175:168] = mem_wdata[7:0];
+    end
+
+	 else if(byte_offset == 5'b10110) //offset = 22
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[207:200] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[199:192] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[191:184] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[183:176] = mem_wdata[7:0];
+    end
+
+	 	 else if(byte_offset == 5'b10111) //offset = 23
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[215:208] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[207:200] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[199:192] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[191:184] = mem_wdata[7:0];
+    end
+
+	 	 else if(byte_offset == 5'b11000) //offset = 24
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[223:216] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[215:208] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[207:200] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[199:192] = mem_wdata[7:0];
+    end
+
+	  else if(byte_offset == 5'b11001) //offset = 25
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[231:224] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[223:216] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[215:208] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[207:200] = mem_wdata[7:0];
+    end
+
+	   else if(byte_offset == 5'b11010) //offset = 26
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[239:232] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[231:224] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[223:216] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[215:208] = mem_wdata[7:0];
+    end
+
+	    else if(byte_offset == 5'b11011) //offset = 27
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[247:240] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[239:232] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[231:224] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[223:216] = mem_wdata[7:0];
+    end
+
+	    else if(byte_offset == 5'b11100) //offset = 28
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[255:248] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[247:240] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[239:232] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[231:224] = mem_wdata[7:0];
+    end
+
+	  else if(byte_offset == 5'b11101) //offset = 29
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[255:248] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[255:248] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[247:240] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[239:232] = mem_wdata[7:0];
+    end
+
+	   else if(byte_offset == 5'b11110) //offset = 30
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[255:248] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[255:248] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[255:248] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[247:240] = mem_wdata[7:0];
+    end
+
+	   else // if(byte_offset == 5'b11111) offset = 31
+	 begin
+	  if (mem_byte_enable[3])
+                    write_cache_out[255:248] = mem_wdata[31:24];
+     if (mem_byte_enable[2])
+                    write_cache_out[255:248] = mem_wdata[23:16];
+     if (mem_byte_enable[1])
+                    write_cache_out[255:248] = mem_wdata[15:8];
+     if (mem_byte_enable[0])
+                    write_cache_out[255:248] = mem_wdata[7:0];
+    end
+
+
+end
+
+endmodule : write_cache

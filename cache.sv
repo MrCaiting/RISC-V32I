@@ -37,6 +37,10 @@ logic valid_in, dirty_in, lru_in;
 logic way_sel;
 logic load_lru;
 
+logic [1:0] pmem_sel;
+logic data_sel;
+logic load_pmem_wdata;
+
 cache_control control
 (
     .clk,
@@ -66,7 +70,10 @@ cache_control control
     .dirty_in,
     .way_sel,
     .load_lru,
-    .lru_in
+    .lru_in,
+    .pmem_sel,
+    .load_pmem_wdata,
+    .data_sel
     );
 
 cache_datapath datapath
@@ -98,7 +105,10 @@ cache_datapath datapath
     .dirty_out_0,
     .valid_out_1,
     .dirty_out_1,
-    .lru_out
+    .lru_out,
+    .pmem_sel,
+    .load_pmem_wdata,
+    .data_sel
     );
 
 

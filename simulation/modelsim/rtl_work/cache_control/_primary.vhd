@@ -29,6 +29,9 @@ entity cache_control is
         dirty_in        : out    vl_logic;
         way_sel         : out    vl_logic;
         load_lru        : out    vl_logic;
-        lru_in          : out    vl_logic
+        lru_in          : out    vl_logic;
+        pmem_sel        : out    vl_logic_vector(1 downto 0);
+        load_pmem_wdata : out    vl_logic;
+        data_sel        : out    vl_logic
     );
 end cache_control;

@@ -1,8 +1,8 @@
 
 State Machine - |mp2|cache:cache|cache_control:control|state
-Name state.idle state.access_pmem state.read_write 
-state.idle 0 0 0 
-state.read_write 1 0 1 
+Name state.read_write state.access_pmem state.write_back 
+state.read_write 0 0 0 
+state.write_back 1 0 1 
 state.access_pmem 1 1 0 
 
 State Machine - |mp2|cpu:cpu|cpu_control:control|state

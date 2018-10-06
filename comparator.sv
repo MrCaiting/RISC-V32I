@@ -10,7 +10,7 @@ module comparator (
     always_comb
     begin
         if (a == b)
-            equal = valid_bit & valid_bit;
+            equal = valid_bit;
         else
             equal = 1'b0;
     end

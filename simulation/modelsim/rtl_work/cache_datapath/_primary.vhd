@@ -20,6 +20,9 @@ entity cache_datapath is
         way_sel         : in     vl_logic;
         load_lru        : in     vl_logic;
         lru_in          : in     vl_logic;
+        pmem_sel        : in     vl_logic_vector(1 downto 0);
+        data_sel        : in     vl_logic;
+        load_pmem_wdata : in     vl_logic;
         pmem_address    : out    vl_logic_vector(31 downto 0);
         pmem_wdata      : out    vl_logic_vector(255 downto 0);
         mem_rdata       : out    vl_logic_vector(31 downto 0);

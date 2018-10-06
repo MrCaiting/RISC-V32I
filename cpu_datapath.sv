@@ -64,10 +64,10 @@ rv32i_word mdr_lb, mdr_lbu;
 assign pc_plus4_out = pc_out + 4;
 assign zext_br_en = {31'd0, br_en};
 assign alu_out_mod = {alu_out[31:1], 1'b0};
-assign mdr_lh = {{17{mdrreg_out[15]}}, mdrreg_out[14:0]};
-assign mdr_lhu = {16'd0, mdrreg_out[15:0]};
-assign mdr_lb = {{25{mdrreg_out[7]}}, mdrreg_out[6:0]};
-assign mdr_lbu = {24'd0, mdrreg_out[7:0]};
+// assign mdr_lh = {{17{mdrreg_out[15]}}, mdrreg_out[14:0]};
+// assign mdr_lhu = {16'd0, mdrreg_out[15:0]};
+// assign mdr_lb = {{25{mdrreg_out[7]}}, mdrreg_out[6:0]};
+// assign mdr_lbu = {24'd0, mdrreg_out[7:0]};
 
 /*PC MUX*/
 mux2 pcmux
@@ -130,6 +130,30 @@ mux8 alumux2
 );
 
 
+// /*REG MUX*/
+// mux16 regfilemux
+// (
+// 	.sel(regfilemux_sel),
+// 	.zero(alu_out),
+// 	.one(zext_br_en),
+// 	.two(u_imm),
+// 	.three(mdrreg_out),
+// 	.four(pc_plus4_out),
+// 	.five(mdr_lh),
+// 	.six(mdr_lhu),
+// 	.seven(mdr_lb),
+// 	.eight(mdr_lbu),
+// 	.nine(32'hXXXXXXXX),
+// 	.ten(32'hXXXXXXXX),
+// 	.eleven(32'hXXXXXXXX),
+// 	.twelve(32'hXXXXXXXX),
+// 	.thirt(32'hXXXXXXXX),
+// 	.fourte(32'hXXXXXXXX),
+// 	.fift(32'hXXXXXXXX),
+// 	.out(regfilemux_out)
+// );
+
+
 /*REG MUX*/
 mux16 regfilemux
 (
@@ -139,10 +163,10 @@ mux16 regfilemux
 	.two(u_imm),
 	.three(mdrreg_out),
 	.four(pc_plus4_out),
-	.five(mdr_lh),
-	.six(mdr_lhu),
-	.seven(mdr_lb),
-	.eight(mdr_lbu),
+	.five({{17{mdrreg_out[15]}}, mdrreg_out[14:0]}),
+	.six({16'd0, mdrreg_out[15:0]}),
+	.seven({{25{mdrreg_out[7]}}, mdrreg_out[6:0]}),
+	.eight({24'd0, mdrreg_out[7:0]}),
 	.nine(32'hXXXXXXXX),
 	.ten(32'hXXXXXXXX),
 	.eleven(32'hXXXXXXXX),

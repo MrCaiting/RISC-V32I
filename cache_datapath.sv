@@ -30,6 +30,10 @@ module cache_datapath
     input logic load_lru,
     input logic lru_in,
 
+    input logic [1:0] pmem_sel,
+    input logic data_sel,
+	input logic load_pmem_wdata,
+
     /* Signals to P-memory */
     output rv32i_word pmem_address,
     output [255:0] pmem_wdata,
@@ -55,6 +59,8 @@ logic [23:0] tag_in;
 logic [23:0] tag_0, tag_1;
 logic [255:0] data_0, data_1;
 logic [255:0] cache_mux_out;
+logic [255:0] write_cache_out;
+logic [255:0] data_in;
 logic [4:0] one_sel, two_sel, three_sel;
 
 /* Signals assignment */
@@ -66,7 +72,16 @@ assign one_sel = byte_offset + 5'd1;
 assign two_sel = byte_offset + 5'd2;
 assign three_sel = byte_offset + 5'd3;
 
-assign pmem_address = {mem_address[31:5], 5'b00000};
+/* Assignment for physical memory signals */
+//assign pmem_wdata = cache_mux_out;
+
+register #(.width(256)) pmem_reg
+(
+	.clk,
+	.load(load_pmem_wdata),
+	.in(cache_mux_out),
+	.out(pmem_wdata)
+);
 
 /* The cache way 0 */
 array data_array0
@@ -74,7 +89,7 @@ array data_array0
     .clk,
     .write(load_data_0),
     .index,
-    .datain(pmem_rdata),
+    .datain(data_in),
     .dataout(data_0)
     );
 
@@ -120,7 +135,7 @@ array data_array1
     .clk,
     .write(load_data_1),
     .index,
-    .datain(pmem_rdata),
+    .datain(data_in),
     .dataout(data_1)
     );
 
@@ -178,11 +193,11 @@ mux2 #(.width(256)) cache_way_mux
     .f(cache_mux_out)
     );
 
-/* The byte-choosing MUXes */
+/* The byte-choosing MUXes used for read */
 mux32 zero_byte_mux
 (
     .sel_in(byte_offset),
-	.a(cache_mux_out[7:0]), .b(cache_mux_out[15:8]),
+    .a(cache_mux_out[7:0]), .b(cache_mux_out[15:8]),
     .c(cache_mux_out[23:16]), .d(cache_mux_out[31:24]),
     .e(cache_mux_out[39:32]), .f(cache_mux_out[47:40]),
     .g(cache_mux_out[55:48]), .h(cache_mux_out[63:56]),
@@ -198,13 +213,13 @@ mux32 zero_byte_mux
     .k1(cache_mux_out[215:208]), .l1(cache_mux_out[223:216]),
     .m1(cache_mux_out[231:224]), .n1(cache_mux_out[239:232]),
     .o1(cache_mux_out[247:240]), .p1(cache_mux_out[255:248]),
-	.out(mem_rdata[7:0])
+    .out(mem_rdata[7:0])
 );
 
 mux32 second_byte_mux
 (
     .sel_in(one_sel[4:0]),
-	.a(cache_mux_out[7:0]), .b(cache_mux_out[15:8]),
+    .a(cache_mux_out[7:0]), .b(cache_mux_out[15:8]),
     .c(cache_mux_out[23:16]), .d(cache_mux_out[31:24]),
     .e(cache_mux_out[39:32]), .f(cache_mux_out[47:40]),
     .g(cache_mux_out[55:48]), .h(cache_mux_out[63:56]),
@@ -221,13 +236,13 @@ mux32 second_byte_mux
     .k1(cache_mux_out[215:208]), .l1(cache_mux_out[223:216]),
     .m1(cache_mux_out[231:224]), .n1(cache_mux_out[239:232]),
     .o1(cache_mux_out[247:240]), .p1(cache_mux_out[255:248]),
-	.out(mem_rdata[15:8])
+    .out(mem_rdata[15:8])
 );
 
 mux32 third_byte_mux
 (
     .sel_in(two_sel[4:0]),
-	.a(cache_mux_out[7:0]), .b(cache_mux_out[15:8]),
+    .a(cache_mux_out[7:0]), .b(cache_mux_out[15:8]),
     .c(cache_mux_out[23:16]), .d(cache_mux_out[31:24]),
     .e(cache_mux_out[39:32]), .f(cache_mux_out[47:40]),
     .g(cache_mux_out[55:48]), .h(cache_mux_out[63:56]),
@@ -244,13 +259,13 @@ mux32 third_byte_mux
     .k1(cache_mux_out[215:208]), .l1(cache_mux_out[223:216]),
     .m1(cache_mux_out[231:224]), .n1(cache_mux_out[239:232]),
     .o1(cache_mux_out[247:240]), .p1(cache_mux_out[255:248]),
-	.out(mem_rdata[23:16])
+    .out(mem_rdata[23:16])
 );
 
 mux32 forth_byte_mux
 (
     .sel_in(three_sel[4:0]),
-	.a(cache_mux_out[7:0]), .b(cache_mux_out[15:8]),
+    .a(cache_mux_out[7:0]), .b(cache_mux_out[15:8]),
     .c(cache_mux_out[23:16]), .d(cache_mux_out[31:24]),
     .e(cache_mux_out[39:32]), .f(cache_mux_out[47:40]),
     .g(cache_mux_out[55:48]), .h(cache_mux_out[63:56]),
@@ -267,7 +282,37 @@ mux32 forth_byte_mux
     .k1(cache_mux_out[215:208]), .l1(cache_mux_out[223:216]),
     .m1(cache_mux_out[231:224]), .n1(cache_mux_out[239:232]),
     .o1(cache_mux_out[247:240]), .p1(cache_mux_out[255:248]),
-	.out(mem_rdata[31:24])
+    .out(mem_rdata[31:24])
 );
+
+/* Physical Memory Address Mux */
+mux4 pmem_add_mux
+(
+  .sel(pmem_sel),
+  .a({mem_address[31:5], 5'b00000}),
+  .b({tag_0, index, 5'b00000}),
+  .c({tag_1, index, 5'b00000}),
+  .d(32'hXXXXXXXX),
+  .f(pmem_address)
+  );
+
+/* Separate Module that Supports Writing to each Byte */
+write_cache write_cache
+(
+    .mem_byte_enable,
+    .mem_wdata,
+    .byte_offset,
+    .cache_mux_out,
+    .write_cache_out
+    );
+
+/* Select What data should be written into cacheline */
+mux2 #(.width(256)) data_mux
+(
+    .sel(data_sel),
+    .a(pmem_rdata),
+    .b(write_cache_out),
+    .f(data_in)
+    );
 
 endmodule : cache_datapath
